@@ -154,10 +154,50 @@ export default function App() {
         )}
       </main>
 
-      <footer className="text-center pb-6">
-        <a href="/admin" className="text-[11px] text-muted/60 hover:text-muted transition-colors">
-          admin
-        </a>
+      <footer className="border-t border-line mt-10">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10">
+          <p className="text-sm text-muted leading-relaxed max-w-2xl">
+            StudyShelf is a free student library for downloading book PDFs, textbooks, notes, and study material —
+            organized by subject so you can find what you need without wasting time. Browse Math, Science, Physics,
+            Chemistry, Biology, Computer Science, Engineering, and more, and download any PDF for free with no
+            sign-up required.
+          </p>
+
+          <div className="mt-6">
+            <span className="text-[11px] font-semibold text-muted uppercase tracking-wide">Popular searches</span>
+            <div className="mt-2.5 flex flex-wrap gap-1.5">
+              {[
+                'free pdf download', 'book pdf', 'textbook pdf free', 'ncert pdf', 'ncert solutions pdf',
+                'class 6 pdf', 'class 7 pdf', 'class 8 pdf', 'class 9 pdf', 'class 10 pdf',
+                'class 11 pdf', 'class 12 pdf', 'physics pdf', 'chemistry pdf', 'biology pdf',
+                'mathematics pdf', 'maths notes pdf', 'computer science pdf', 'engineering notes pdf',
+                'engineering ebooks free', 'first year engineering pdf', 'competitive exam books pdf',
+                'upsc notes pdf', 'ssc notes pdf', 'jee notes pdf', 'neet notes pdf', 'free study material',
+                'student notes download', 'exam preparation pdf', 'previous year question papers pdf',
+                'reference books pdf', 'free ebooks download', 'college textbooks pdf', 'school textbooks pdf',
+                'english literature pdf', 'history notes pdf', 'geography notes pdf', 'economics notes pdf',
+                'accountancy notes pdf', 'business studies pdf', 'programming books pdf', 'python book pdf',
+                'data structures pdf', 'algorithms book pdf', 'general knowledge pdf', 'gk notes pdf',
+                'aptitude book pdf', 'reasoning book pdf', 'free notes for students', 'study material download',
+                'pdf library free', 'download books online free', 'academic pdf resources',
+              ].map((term) => (
+                <span
+                  key={term}
+                  className="text-[11px] text-muted/80 bg-stone-50 border border-line rounded-full px-2.5 py-1"
+                >
+                  {term}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-[11px] text-muted">
+            <span>© {new Date().getFullYear()} StudyShelf. Free for students, everywhere.</span>
+            <a href="mailto:namankumarsingh99@gmail.com" className="hover:text-ink transition-colors">
+              namankumarsingh99@gmail.com
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
