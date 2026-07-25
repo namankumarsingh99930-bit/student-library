@@ -51,10 +51,8 @@ export default async (req: Request, context: Context) => {
     }
 
     const path = `${BOOKS_FOLDER}/${cleanSubject}/${cleanFilename}`;
-    const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${encodeURIComponent(path)
-      .replace(/%2F/g, '/')}`;
+    const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
 
-    // Check if a file with this name already exists
     const existingRes = await fetch(`${apiUrl}?ref=${GITHUB_BRANCH}`, {
       headers: { Authorization: `token ${githubToken}` },
     });
@@ -82,7 +80,7 @@ export default async (req: Request, context: Context) => {
 
     if (!commitRes.ok) {
       const errData = await commitRes.json().catch(() => ({}));
-      throw new Error(errData.message || `GitHub commit failed (${commitRes.status}). File may be too large.`);
+      throw new Error(errData.message || `GitHub commit failed (${commitRes.status}). File may be too large — use manual GitHub upload for files over ~4MB.`);
     }
 
     return Response.json(
