@@ -45,7 +45,6 @@ export async function fetchLibrary(): Promise<LibraryData> {
     });
 
   const subjectSet = new Set<string>();
-  // Also pick up empty subject folders (folders with only a .gitkeep placeholder)
   tree
     .filter((item) => item.path.startsWith(`${BOOKS_FOLDER}/`))
     .forEach((item) => {
