@@ -28,14 +28,23 @@ export default function App() {
     return list.filter((b) => humanizeTitle(b.name).toLowerCase().includes(q));
   }, [library, activeSubject, query]);
 
-  const handleDownloadClick = (e: React.MouseEvent, fileUrl: string) => {
+  const handleDownloadClick = (e: React.MouseEvent, fileUrl: string, filename: string) => {
     e.preventDefault();
     try {
       window.open(POPUNDER_URL, '_blank');
     } catch {
-      // ignore — ad blockers or popup blockers may prevent this, download still proceeds
+      // ignore — ad blockers may prevent this
     }
-    window.open(fileUrl, '_blank');
+
+    // Trigger a real background download (not a navigation) via our proxy —
+    // this stays on the current tab while the file saves to the device.
+    const proxyUrl = `/api/download-proxy?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(filename)}`;
+    const link = document.createElement('a');
+    link.href = proxyUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   };
 
   return (
@@ -154,7 +163,7 @@ export default function App() {
                   </div>
                   <a
                     href={rawUrl(book.path)}
-                    onClick={(e) => handleDownloadClick(e, rawUrl(book.path))}
+                    onClick={(e) => handleDownloadClick(e, rawUrl(book.path), book.name)}
                     className="shrink-0 px-4 py-2 rounded-lg bg-shelf-soft text-shelf font-semibold text-xs flex items-center gap-1.5 hover:bg-shelf hover:text-white transition-colors"
                   >
                     <Download className="w-3.5 h-3.5" />
