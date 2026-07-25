@@ -77,6 +77,14 @@ export function formatSize(bytes: number): string {
   return `${(bytes / 1024).toFixed(0)} KB`;
 }
 
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 const SPINE_COLORS = ['#0F6D5C', '#C08A2E', '#7C3AED', '#B91C63', '#1D4ED8', '#B45309', '#0891B2', '#BE123C'];
 
 export function colorForSubject(name: string): string {
