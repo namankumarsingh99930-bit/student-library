@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library } from 'lucide-react';
 import { fetchLibrary, rawUrl, humanizeTitle, formatSize, colorForSubject, LibraryData } from './lib/github';
+import SideAdBanner from './components/SideAdBanner';
+
+const POPUNDER_URL = 'https://pleased-report.com/b.3zVJ0BPG3tpRvNbJm/VeJ/ZJDQ0b3hMCjYU/1eN-DGQG1sLPTjcNy/NxTKUD0NNGDOk_';
 
 export default function App() {
   const [library, setLibrary] = useState<LibraryData | null>(null);
@@ -25,6 +28,16 @@ export default function App() {
     return list.filter((b) => humanizeTitle(b.name).toLowerCase().includes(q));
   }, [library, activeSubject, query]);
 
+  const handleDownloadClick = (e: React.MouseEvent, fileUrl: string) => {
+    e.preventDefault();
+    try {
+      window.open(POPUNDER_URL, '_blank');
+    } catch {
+      // ignore — ad blockers or popup blockers may prevent this, download still proceeds
+    }
+    window.open(fileUrl, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-paper text-ink font-body flex flex-col">
       <header className="max-w-5xl mx-auto w-full px-5 sm:px-8 py-6 flex items-center gap-2.5">
@@ -43,7 +56,8 @@ export default function App() {
         )}
       </header>
 
-      <main className="max-w-5xl mx-auto w-full px-5 sm:px-8 pb-16 flex-1">
+      <div className="max-w-5xl mx-auto w-full px-5 sm:px-8 pb-16 flex-1 flex flex-col lg:flex-row gap-8">
+        <main className="flex-1 min-w-0">
         {loading && (
           <div className="flex items-center gap-2 text-muted text-sm py-16">
             <Loader2 className="w-4 h-4 animate-spin" />
@@ -140,8 +154,7 @@ export default function App() {
                   </div>
                   <a
                     href={rawUrl(book.path)}
-                    target="_blank"
-                    rel="noreferrer"
+                    onClick={(e) => handleDownloadClick(e, rawUrl(book.path))}
                     className="shrink-0 px-4 py-2 rounded-lg bg-shelf-soft text-shelf font-semibold text-xs flex items-center gap-1.5 hover:bg-shelf hover:text-white transition-colors"
                   >
                     <Download className="w-3.5 h-3.5" />
@@ -153,6 +166,12 @@ export default function App() {
           </>
         )}
       </main>
+
+        <aside className="w-full lg:w-64 shrink-0 lg:sticky lg:top-6 lg:self-start">
+          <span className="text-[10px] text-muted/60 uppercase tracking-wide block mb-2 text-center">Advertisement</span>
+          <SideAdBanner />
+        </aside>
+      </div>
 
       <footer className="border-t border-line mt-10">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 py-10">
