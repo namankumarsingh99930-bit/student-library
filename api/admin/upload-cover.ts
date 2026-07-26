@@ -12,11 +12,19 @@ const GITHUB_REPO = 'student-library';
 const GITHUB_BRANCH = 'main';
 const COVERS_FOLDER = 'covers';
 
-function sanitizeSegment(input: string): string {
-  return input
-    .replace(/[^a-zA-Z0-9 _-]/g, '')
-    .trim()
-    .replace(/\s+/g, ' ');
+function sanitizeSubject(input: string): string {
+  // Subject always comes from an existing folder name — just guard against path traversal
+  return (input || '').replace(/[/\\]/g, '').trim();
+}
+
+function safeBaseName(input: string): string {
+  // Keep the book's name EXACTLY as stored (so it matches for lookups) —
+  // only strip characters that would break a file path.
+  return (input || '').replace(/[/\\]/g, '').trim();
+}
+
+function encodePath(path: string): string {
+  return path.split('/').map(encodeURIComponent).join('/');
 }
 
 export default async function handler(req: Request) {
@@ -42,8 +50,8 @@ export default async function handler(req: Request) {
       return Response.json({ error: 'Incorrect password.' }, { status: 401, headers: CORS_HEADERS });
     }
 
-    const cleanSubject = sanitizeSegment(subject || '');
-    const cleanBaseName = sanitizeSegment((bookFilename || '').replace(/\.pdf$/i, ''));
+    const cleanSubject = sanitizeSubject(subject || '');
+    const cleanBaseName = safeBaseName((bookFilename || '').replace(/\.pdf$/i, ''));
     const cleanExt = (ext || 'jpg').replace(/[^a-zA-Z]/g, '').toLowerCase();
 
     if (!cleanSubject || !cleanBaseName) {
@@ -54,7 +62,7 @@ export default async function handler(req: Request) {
     }
 
     const path = `${COVERS_FOLDER}/${cleanSubject}/${cleanBaseName}.${cleanExt}`;
-    const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}`;
+    const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${encodePath(path)}`;
 
     // Check if a cover already exists for this book — if so, update it (overwrite) instead of failing
     let existingSha: string | undefined;
