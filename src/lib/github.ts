@@ -3,6 +3,7 @@ export const GITHUB_OWNER = 'namankumarsingh99930-bit';
 export const GITHUB_REPO = 'student-library';
 export const GITHUB_BRANCH = 'main';
 export const BOOKS_FOLDER = 'books';
+export const COVERS_FOLDER = 'covers';
 // ------------------------------------------
 
 export interface BookEntry {
@@ -10,6 +11,7 @@ export interface BookEntry {
   name: string;
   path: string;
   size: number;
+  coverPath?: string;
 }
 
 export interface LibraryData {
@@ -35,13 +37,32 @@ export async function fetchLibrary(): Promise<LibraryData> {
   const data = await res.json();
   const tree: any[] = data.tree || [];
 
+  // Build a lookup of covers: "<subject>::<basename>" -> cover file path
+  const coverMap = new Map<string, string>();
+  tree
+    .filter(
+      (item) =>
+        item.type === 'blob' &&
+        item.path.startsWith(`${COVERS_FOLDER}/`) &&
+        /\.(jpg|jpeg|png|webp|gif)$/i.test(item.path)
+    )
+    .forEach((item) => {
+      const parts = item.path.split('/');
+      const subject = parts[1];
+      const filename = parts[parts.length - 1];
+      const baseName = filename.replace(/\.(jpg|jpeg|png|webp|gif)$/i, '').toLowerCase();
+      if (subject && baseName) coverMap.set(`${subject}::${baseName}`, item.path);
+    });
+
   const books: BookEntry[] = tree
     .filter((item) => item.type === 'blob' && item.path.startsWith(`${BOOKS_FOLDER}/`) && item.path.toLowerCase().endsWith('.pdf'))
     .map((item) => {
       const parts = item.path.split('/');
       const subject = parts[1] || 'Uncategorized';
       const name = parts[parts.length - 1];
-      return { subject, name, path: item.path, size: item.size || 0 };
+      const baseName = name.replace(/\.pdf$/i, '').toLowerCase();
+      const coverPath = coverMap.get(`${subject}::${baseName}`);
+      return { subject, name, path: item.path, size: item.size || 0, coverPath };
     });
 
   const subjectSet = new Set<string>();
