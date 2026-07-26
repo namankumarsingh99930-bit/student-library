@@ -14,13 +14,14 @@ const COVERS_FOLDER = 'covers';
 
 function sanitizeSubject(input: string): string {
   // Subject always comes from an existing folder name — just guard against path traversal
-  return (input || '').replace(/[/\\]/g, '').trim();
+  return (input || '').replace(/[/\\]/g, '');
 }
 
 function safeBaseName(input: string): string {
-  // Keep the book's name EXACTLY as stored (so it matches for lookups) —
-  // only strip characters that would break a file path.
-  return (input || '').replace(/[/\\]/g, '').trim();
+  // Keep the book's name EXACTLY as stored, including any stray spaces —
+  // trimming here would break matching against books that have odd spacing
+  // (e.g. "Book Name .pdf"). Only strip characters that would break a file path.
+  return (input || '').replace(/[/\\]/g, '');
 }
 
 function encodePath(path: string): string {
