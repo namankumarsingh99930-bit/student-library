@@ -12,7 +12,7 @@ import {
 } from './lib/github';
 import SideAdBanner from './components/SideAdBanner';
 
-const POPUNDER_URL = 'https://pleased-report.com/b.3zVJ0BPG3tpRvNbJm/VeJ/ZJDQ0b3hMCjYU/1eN-DGQG1sLPTjcNy/NxTKUD0NNGDOk_';
+const POPUNDER_URL = 'https://affectionatestorage.com/bb3EVJ0hP.3jpmvqbYmXVDJ_ZeDv0/3fMmjtUL4_NljpYN1WL/TAcsyFNYTBgt2lNxjXkX';
 
 type Route =
   | { view: 'home' }
@@ -47,19 +47,38 @@ function setMetaDescription(content: string) {
   tag.setAttribute('content', content);
 }
 
-function handleDownload(fileUrl: string, filename: string) {
+async function handleDownload(fileUrl: string, filename: string) {
   try {
     window.open(POPUNDER_URL, '_blank');
   } catch {
     // ignore — ad blockers may prevent this
   }
-  const proxyUrl = `/api/download-proxy?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(filename)}`;
-  const link = document.createElement('a');
-  link.href = proxyUrl;
-  link.download = filename;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
+
+  try {
+    const proxyUrl = `/api/download-proxy?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(filename)}`;
+    const res = await fetch(proxyUrl);
+
+    if (!res.ok) {
+      throw new Error('Download failed — please try again.');
+    }
+
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('pdf')) {
+      throw new Error('This file could not be downloaded right now — please try again.');
+    }
+
+    const blob = await res.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = blobUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(blobUrl);
+  } catch (err: any) {
+    alert(err.message || 'Download failed — please try again.');
+  }
 }
 
 export default function App() {
