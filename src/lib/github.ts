@@ -83,6 +83,54 @@ export function rawUrl(path: string): string {
   return `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${path}`;
 }
 
+/**
+ * Finds the most recently added book PDF paths by scanning recent commits
+ * that touched the books/ folder. Returns file paths, newest first.
+ */
+export async function fetchRecentBookPaths(limit = 5): Promise<string[]> {
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=${BOOKS_FOLDER}&per_page=15`
+    );
+    if (!res.ok) return [];
+    const commits = await res.json();
+    if (!Array.isArray(commits)) return [];
+
+    const found: string[] = [];
+    const seen = new Set<string>();
+
+    for (const commit of commits) {
+      if (found.length >= limit) break;
+      try {
+        const detailRes = await fetch(
+          `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits/${commit.sha}`
+        );
+        if (!detailRes.ok) continue;
+        const detail = await detailRes.json();
+        const files = detail.files || [];
+        for (const f of files) {
+          if (
+            f.status === 'added' &&
+            f.filename?.startsWith(`${BOOKS_FOLDER}/`) &&
+            f.filename.toLowerCase().endsWith('.pdf') &&
+            !seen.has(f.filename)
+          ) {
+            seen.add(f.filename);
+            found.push(f.filename);
+            if (found.length >= limit) break;
+          }
+        }
+      } catch {
+        continue;
+      }
+    }
+
+    return found;
+  } catch {
+    return [];
+  }
+}
+
 export function humanizeTitle(filename: string): string {
   return filename
     .replace(/\.pdf$/i, '')
