@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info } from 'lucide-react';
+import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info, Share2, BookMarked, Sparkles } from 'lucide-react';
 import {
   fetchLibrary,
+  fetchRecentBookPaths,
   rawUrl,
   humanizeTitle,
   formatSize,
@@ -11,6 +12,7 @@ import {
   BookEntry,
 } from './lib/github';
 import SideAdBanner from './components/SideAdBanner';
+import RequestBookModal from './components/RequestBookModal';
 
 const POPUNDER_URL = 'https://affectionatestorage.com/bb3EVJ0hP.3jpmvqbYmXVDJ_ZeDv0/3fMmjtUL4_NljpYN1WL/TAcsyFNYTBgt2lNxjXkX';
 
@@ -45,6 +47,21 @@ function setMetaDescription(content: string) {
     document.head.appendChild(tag);
   }
   tag.setAttribute('content', content);
+}
+
+async function handleShare(bookTitle: string) {
+  const shareUrl = window.location.href;
+  const shareText = `Check out "${bookTitle}" — free PDF on StudyShelf`;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: shareText, url: shareUrl });
+      return;
+    } catch {
+      // user cancelled or share failed — fall through to WhatsApp link
+    }
+  }
+  window.open(`https://wa.me/?text=${encodeURIComponent(`${shareText} ${shareUrl}`)}`, '_blank');
 }
 
 async function handleDownload(fileUrl: string, filename: string) {
@@ -87,6 +104,8 @@ export default function App() {
   const [loadError, setLoadError] = useState('');
   const [route, setRoute] = useState<Route>(() => parsePathToRoute(window.location.pathname));
   const [query, setQuery] = useState('');
+  const [recentBooks, setRecentBooks] = useState<BookEntry[]>([]);
+  const [showRequestModal, setShowRequestModal] = useState(false);
 
   useEffect(() => {
     fetchLibrary()
@@ -94,6 +113,16 @@ export default function App() {
       .catch((err) => setLoadError(err.message || 'Could not load the library.'))
       .finally(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    if (!library) return;
+    fetchRecentBookPaths(5).then((paths) => {
+      const matched = paths
+        .map((p) => library.books.find((b) => b.path === p))
+        .filter((b): b is BookEntry => Boolean(b));
+      setRecentBooks(matched);
+    });
+  }, [library]);
 
   useEffect(() => {
     const onPopState = () => setRoute(parsePathToRoute(window.location.pathname));
@@ -167,13 +196,23 @@ export default function App() {
             <div className="text-[11px] text-muted mt-0.5">book PDF library</div>
           </div>
         </a>
+        <button
+          onClick={() => setShowRequestModal(true)}
+          className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-shelf bg-shelf-soft px-3 py-1.5 rounded-full hover:bg-shelf hover:text-white transition-colors shrink-0"
+        >
+          <BookMarked className="w-3.5 h-3.5" />
+          <span className="hidden sm:inline">Request a Book</span>
+          <span className="sm:hidden">Request</span>
+        </button>
         {library && (
-          <span className="ml-auto text-xs font-mono text-muted hidden sm:flex items-center gap-1.5">
+          <span className="text-xs font-mono text-muted hidden lg:flex items-center gap-1.5 ml-3">
             <Library className="w-3.5 h-3.5" />
             {library.subjects.length} subjects · {library.books.length} books
           </span>
         )}
       </header>
+
+      {showRequestModal && <RequestBookModal onClose={() => setShowRequestModal(false)} />}
 
       <div className="max-w-5xl mx-auto w-full px-5 sm:px-8 pb-16 flex-1 flex flex-col lg:flex-row gap-8">
         <main className="flex-1 min-w-0">
@@ -201,6 +240,44 @@ export default function App() {
 
           {!loading && !loadError && library && route.view === 'home' && (
             <>
+              {recentBooks.length > 0 && (
+                <div className="mb-9">
+                  <div className="flex items-center gap-1.5 mb-3">
+                    <Sparkles className="w-4 h-4 text-index" />
+                    <span className="text-xs font-semibold text-muted uppercase tracking-wide">Recently Added</span>
+                  </div>
+                  <div className="flex gap-3 overflow-x-auto pb-1 -mx-1 px-1">
+                    {recentBooks.map((book) => (
+                      <a
+                        key={book.path}
+                        href={bookPath(book.subject, book)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate(bookPath(book.subject, book));
+                        }}
+                        className="shrink-0 w-32 group"
+                      >
+                        {book.coverPath ? (
+                          <img
+                            src={rawUrl(book.coverPath)}
+                            alt=""
+                            className="w-32 h-40 rounded-lg object-cover border border-line group-hover:border-shelf/40 transition-colors"
+                          />
+                        ) : (
+                          <div className="w-32 h-40 rounded-lg bg-index-soft border border-line flex items-center justify-center group-hover:border-shelf/40 transition-colors">
+                            <FileText className="w-6 h-6 text-index" />
+                          </div>
+                        )}
+                        <div className="text-xs font-semibold mt-2 line-clamp-2 leading-snug">
+                          {humanizeTitle(book.name)}
+                        </div>
+                        <div className="text-[10px] text-muted mt-0.5">{book.subject}</div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <h1 className="font-display font-semibold text-2xl sm:text-3xl mb-1">Pick a subject</h1>
               <p className="text-muted text-sm mb-8">Browse textbook PDFs organized by subject.</p>
 
@@ -363,13 +440,22 @@ export default function App() {
                     StudyShelf, a free student library. No sign-up required.
                   </p>
 
-                  <button
-                    onClick={() => handleDownload(rawUrl(activeBook.path), activeBook.name)}
-                    className="px-6 py-3 rounded-xl bg-shelf hover:bg-shelf/90 text-white font-semibold text-sm flex items-center gap-2 transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download PDF
-                  </button>
+                  <div className="flex items-center gap-2.5">
+                    <button
+                      onClick={() => handleDownload(rawUrl(activeBook.path), activeBook.name)}
+                      className="px-6 py-3 rounded-xl bg-shelf hover:bg-shelf/90 text-white font-semibold text-sm flex items-center gap-2 transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download PDF
+                    </button>
+                    <button
+                      onClick={() => handleShare(humanizeTitle(activeBook.name))}
+                      className="p-3 rounded-xl border border-line hover:border-shelf/40 text-muted hover:text-shelf transition-colors"
+                      aria-label="Share this book"
+                    >
+                      <Share2 className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
               )}
             </>
