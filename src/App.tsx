@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library } from 'lucide-react';
+import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info } from 'lucide-react';
 import {
   fetchLibrary,
   rawUrl,
@@ -177,6 +177,14 @@ export default function App() {
 
       <div className="max-w-5xl mx-auto w-full px-5 sm:px-8 pb-16 flex-1 flex flex-col lg:flex-row gap-8">
         <main className="flex-1 min-w-0">
+          <div className="flex items-start gap-2 bg-shelf-soft border border-shelf/20 rounded-xl px-4 py-3 mb-6 text-xs sm:text-sm text-shelf leading-relaxed">
+            <Info className="w-4 h-4 mt-0.5 shrink-0" />
+            <span>
+              Tapping <strong>Download</strong> opens an ad in a new tab — just stay on this page, your file will
+              start downloading automatically.
+            </span>
+          </div>
+
           {loading && (
             <div className="flex items-center gap-2 text-muted text-sm py-16">
               <Loader2 className="w-4 h-4 animate-spin" />
