@@ -6,7 +6,7 @@ const GITHUB_OWNER = 'namankumarsingh99930-bit';
 const GITHUB_REPO = 'student-library';
 const GITHUB_BRANCH = 'main';
 const BOOKS_FOLDER = 'books';
-const SITE_URL = 'https://REPLACE-WITH-YOUR-VERCEL-URL.vercel.app'; // update this after your first deploy
+const SITE_URL = 'https://student-library-eight.vercel.app';
 
 function slugify(text: string): string {
   return text
