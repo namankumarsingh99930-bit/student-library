@@ -15,13 +15,14 @@ import {
   Copy,
   Check,
   Download,
+  ImagePlus,
 } from 'lucide-react';
 import { fetchLibrary, humanizeTitle, formatSize, colorForSubject, LibraryData } from './lib/github';
 import { getAllSourceFiles, SourceFile } from './data/sourceCode';
 
-type Tab = 'upload' | 'manage' | 'code';
+type Tab = 'upload' | 'cover' | 'manage' | 'code';
 
-const MAX_RECOMMENDED_SIZE = 4 * 1024 * 1024; // 4MB — Netlify function payload limits apply above this
+const MAX_RECOMMENDED_SIZE = 4 * 1024 * 1024; // 4MB — Netlify function payload limits apply above this; use manual GitHub upload for bigger files
 
 export default function Admin() {
   const [password, setPassword] = useState('');
@@ -133,6 +134,7 @@ function AdminDashboard({ password, onLogout }: { password: string; onLogout: ()
       <nav className="max-w-4xl mx-auto px-5 sm:px-8 flex gap-2 mb-6">
         {[
           { id: 'upload' as Tab, label: 'Upload Book', icon: Upload },
+          { id: 'cover' as Tab, label: 'Add Cover', icon: ImagePlus },
           { id: 'manage' as Tab, label: 'Manage Library', icon: BookOpen },
           { id: 'code' as Tab, label: 'Source Code', icon: Code2 },
         ].map(({ id, label, icon: Icon }) => (
@@ -151,6 +153,7 @@ function AdminDashboard({ password, onLogout }: { password: string; onLogout: ()
 
       <main className="max-w-4xl mx-auto px-5 sm:px-8 pb-24">
         {tab === 'upload' && <UploadTab password={password} />}
+        {tab === 'cover' && <CoverTab password={password} />}
         {tab === 'manage' && <ManageTab password={password} />}
         {tab === 'code' && <CodeTab />}
       </main>
@@ -275,8 +278,8 @@ function UploadTab({ password }: { password: string }) {
           <p className="mt-2 text-xs text-amber-700 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2 flex items-start gap-1.5">
             <AlertCircle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
             <span>
-              This file is {formatSize(file.size)}. Files over ~4 MB may fail to upload due to serverless size
-              limits — if it fails, try a smaller/compressed PDF.
+              This file is {formatSize(file.size)}. Files over ~4 MB may fail here — for bigger books, upload them
+              directly on GitHub instead (they'll still show up in the library automatically).
             </span>
           </p>
         )}
@@ -289,6 +292,160 @@ function UploadTab({ password }: { password: string }) {
       >
         {status === 'uploading' ? <Loader2 className="w-4 h-4 animate-spin" /> : <Upload className="w-4 h-4" />}
         <span>{status === 'uploading' ? 'Uploading…' : 'Upload Book'}</span>
+      </button>
+
+      {status === 'success' && (
+        <p className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-lg px-3 py-2.5 flex items-start gap-1.5">
+          <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+          <span>{message}</span>
+        </p>
+      )}
+      {status === 'error' && (
+        <p className="text-xs text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2.5 flex items-start gap-1.5">
+          <AlertCircle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+          <span>{message}</span>
+        </p>
+      )}
+    </div>
+  );
+}
+
+function CoverTab({ password }: { password: string }) {
+  const [library, setLibrary] = useState<LibraryData | null>(null);
+  const [selectedSubject, setSelectedSubject] = useState('');
+  const [selectedBook, setSelectedBook] = useState('');
+  const [file, setFile] = useState<File | null>(null);
+  const [preview, setPreview] = useState<string | null>(null);
+  const [status, setStatus] = useState<'idle' | 'uploading' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+
+  const loadLibrary = useCallback(() => {
+    fetchLibrary().then(setLibrary).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    loadLibrary();
+  }, [loadLibrary]);
+
+  const booksInSubject = library ? library.books.filter((b) => b.subject === selectedSubject) : [];
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0] || null;
+    setFile(f);
+    setPreview(f ? URL.createObjectURL(f) : null);
+  };
+
+  const handleUpload = async () => {
+    if (!file || !selectedSubject || !selectedBook) return;
+    setStatus('uploading');
+    setMessage('');
+
+    try {
+      const base64Content = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve((reader.result as string).split(',')[1]);
+        reader.onerror = () => reject(new Error('Could not read image.'));
+        reader.readAsDataURL(file);
+      });
+
+      const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+
+      const res = await fetch('/api/admin/upload-cover', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          password,
+          subject: selectedSubject,
+          bookFilename: selectedBook,
+          ext,
+          base64Content,
+        }),
+      });
+      const data = await res.json();
+
+      if (!res.ok || data.error) {
+        setStatus('error');
+        setMessage(data.error || 'Cover upload failed.');
+        return;
+      }
+
+      setStatus('success');
+      setMessage('Cover added! It may take a minute to show on the site.');
+      setFile(null);
+      setPreview(null);
+    } catch (err: any) {
+      setStatus('error');
+      setMessage(err.message || 'Cover upload failed.');
+    }
+  };
+
+  return (
+    <div className="max-w-md space-y-5">
+      <p className="text-xs text-muted">
+        Attach a cover picture to an existing book — students will see the picture and title together instead of a
+        plain file icon. This never affects downloads or ads.
+      </p>
+
+      <div>
+        <label className="text-xs font-semibold text-muted uppercase tracking-wide">Subject</label>
+        <select
+          value={selectedSubject}
+          onChange={(e) => {
+            setSelectedSubject(e.target.value);
+            setSelectedBook('');
+          }}
+          className="mt-2 w-full px-3.5 py-2.5 rounded-xl border border-line text-sm focus:outline-none focus:border-shelf"
+        >
+          <option value="">Select a subject…</option>
+          {library?.subjects.map((s) => (
+            <option key={s} value={s}>
+              {s}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {selectedSubject && (
+        <div>
+          <label className="text-xs font-semibold text-muted uppercase tracking-wide">Book</label>
+          <select
+            value={selectedBook}
+            onChange={(e) => setSelectedBook(e.target.value)}
+            className="mt-2 w-full px-3.5 py-2.5 rounded-xl border border-line text-sm focus:outline-none focus:border-shelf"
+          >
+            <option value="">Select a book…</option>
+            {booksInSubject.map((b) => (
+              <option key={b.path} value={b.name}>
+                {humanizeTitle(b.name)}
+                {b.coverPath ? ' (has cover)' : ''}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
+
+      {selectedBook && (
+        <div>
+          <label className="text-xs font-semibold text-muted uppercase tracking-wide">Cover image</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleFileChange}
+            className="mt-2 w-full text-xs file:mr-3 file:py-2 file:px-3 file:rounded-lg file:border-0 file:bg-shelf-soft file:text-shelf file:font-semibold file:text-xs"
+          />
+          {preview && (
+            <img src={preview} alt="Preview" className="mt-3 w-32 h-40 object-cover rounded-lg border border-line" />
+          )}
+        </div>
+      )}
+
+      <button
+        onClick={handleUpload}
+        disabled={!file || !selectedSubject || !selectedBook || status === 'uploading'}
+        className="w-full py-3 rounded-xl bg-shelf hover:bg-shelf/90 disabled:opacity-40 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
+      >
+        {status === 'uploading' ? <Loader2 className="w-4 h-4 animate-spin" /> : <ImagePlus className="w-4 h-4" />}
+        <span>{status === 'uploading' ? 'Uploading…' : 'Add Cover'}</span>
       </button>
 
       {status === 'success' && (

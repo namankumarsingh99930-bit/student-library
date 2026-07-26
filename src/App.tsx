@@ -274,9 +274,17 @@ export default function App() {
                       }}
                       className="flex items-center gap-3 min-w-0 flex-1"
                     >
-                      <div className="w-9 h-9 rounded-lg bg-index-soft flex items-center justify-center shrink-0">
-                        <FileText className="w-4 h-4 text-index" />
-                      </div>
+                      {book.coverPath ? (
+                        <img
+                          src={rawUrl(book.coverPath)}
+                          alt=""
+                          className="w-9 h-11 rounded-md object-cover border border-line shrink-0"
+                        />
+                      ) : (
+                        <div className="w-9 h-9 rounded-lg bg-index-soft flex items-center justify-center shrink-0">
+                          <FileText className="w-4 h-4 text-index" />
+                        </div>
+                      )}
                       <div className="min-w-0">
                         <div className="text-sm font-semibold truncate hover:underline">{humanizeTitle(book.name)}</div>
                         <div className="text-[11px] font-mono text-muted mt-0.5">PDF · {formatSize(book.size)}</div>
@@ -323,9 +331,17 @@ export default function App() {
                   </span>
 
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-index-soft flex items-center justify-center shrink-0">
-                      <FileText className="w-6 h-6 text-index" />
-                    </div>
+                    {activeBook.coverPath ? (
+                      <img
+                        src={rawUrl(activeBook.coverPath)}
+                        alt=""
+                        className="w-20 h-28 rounded-xl object-cover border border-line shrink-0"
+                      />
+                    ) : (
+                      <div className="w-14 h-14 rounded-xl bg-index-soft flex items-center justify-center shrink-0">
+                        <FileText className="w-6 h-6 text-index" />
+                      </div>
+                    )}
                     <div>
                       <h1 className="font-display font-semibold text-xl sm:text-2xl leading-snug">
                         {humanizeTitle(activeBook.name)}
