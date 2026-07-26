@@ -16,7 +16,7 @@ export default function SideAdBanner() {
           s = d.createElement('script'),
           l = d.scripts[d.scripts.length - 1];
       s.settings = sucke || {};
-      s.src = "//relieved-understanding.com/bbXDV.s/dJG/ln0YYrWscs/KeamT9WuxZzUfl/k/P/TicByZNeT/UI0NNlTUMOtzNfzEIC1qNzT/Q/1ANkw_";
+      s.src = "//unfoldedtrade.com/bSX.V/skd/Gjli0/YEWFcL/qefmB9su/ZUU-lakZPhTlc-yINcT/gn2ROYD/E/tPNEzCIR1ZO/DRYH4ANnQE";
       s.async = true;
       s.referrerPolicy = 'no-referrer-when-downgrade';
       l.parentNode.insertBefore(s, l);
