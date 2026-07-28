@@ -1,0 +1,506 @@
+{
+  "title": "Class 9 math",
+  "subject": "Class 9 questions",
+  "questions": [
+    {
+      "question": "Which of the following is a rational number between 3 and 4?",
+      "options": [
+        "3.5",
+        "2.9",
+        "4.2",
+        "3.999... (Wait, check options: 3.5 is rational and lies between them)"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The value of (256)^0.16 × (256)^0.09 is:",
+      "options": [
+        "4",
+        "16",
+        "64",
+        "256"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following is a polynomial in one variable?",
+      "options": [
+        "x + 2/x",
+        "x² - 5x + 6",
+        "√x + 3",
+        "x^3 + y^3 + 7"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The degree of the zero polynomial is:",
+      "options": [
+        "0",
+        "1",
+        "Not defined",
+        "Any natural number"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "If x + 1 is a factor of the polynomial p(x) = x^3 + x^2 + x + 1, then the value of p(-1) is:",
+      "options": [
+        "0",
+        "1",
+        "-1",
+        "2"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The point whose ordinate is 5 and abscissa is -3 lies in which quadrant?",
+      "options": [
+        "First quadrant",
+        "Second quadrant",
+        "Third quadrant",
+        "Fourth quadrant"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The linear equation 2x + 3y = 12 has how many solutions?",
+      "options": [
+        "Only one",
+        "Exactly two",
+        "Infinitely many",
+        "Zero"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The angle which is four times its complement is:",
+      "options": [
+        "36°",
+        "72°",
+        "18°",
+        "144°"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If the angles of a triangle are in the ratio 2:3:4, the measure of the largest angle is:",
+      "options": [
+        "40°",
+        "60°",
+        "80°",
+        "100°"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Diagonals of a parallelogram bisect each other. If one diagonal is 10 cm, the segment from vertex to center is:",
+      "options": [
+        "10 cm",
+        "5 cm",
+        "2.5 cm",
+        "20 cm"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The area of an equilateral triangle with side 4 cm is:",
+      "options": [
+        "4√3 cm²",
+        "2√3 cm²",
+        "8 cm²",
+        "16 cm²"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The total surface area of a cube whose edge is 5 cm is:",
+      "options": [
+        "125 cm²",
+        "150 cm²",
+        "100 cm²",
+        "75 cm²"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The mean of first five prime numbers is:",
+      "options": [
+        "5",
+        "5.6",
+        "4.8",
+        "6.2"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If the probability of an event happening is 0.35, the probability of its not happening is:",
+      "options": [
+        "0.35",
+        "0.65",
+        "1.35",
+        "0"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The value of √5 up to 3 decimal places is approximately:",
+      "options": [
+        "2.236",
+        "2.449",
+        "2.645",
+        "2.223"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Factorize: 4x² - 12x + 9",
+      "options": [
+        "(2x - 3)(2x - 3)",
+        "(2x + 3)(2x + 3)",
+        "(4x - 3)(x - 3)",
+        "(2x - 9)(2x - 1)"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The perpendicular distance of the point P(3, 4) from the y-axis is:",
+      "options": [
+        "3 units",
+        "4 units",
+        "5 units",
+        "7 units"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following is not a criterion for congruence of triangles?",
+      "options": [
+        "SAS",
+        "SSA",
+        "ASA",
+        "SSS"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The sum of all interior angles of a pentagon is:",
+      "options": [
+        "360°",
+        "540°",
+        "720°",
+        "1080°"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The area of a triangle with sides 13 cm, 14 cm, and 15 cm is:",
+      "options": [
+        "84 cm²",
+        "90 cm²",
+        "70 cm²",
+        "112 cm²"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Volume of a cylinder of radius r and height h is:",
+      "options": [
+        "(1/3)πr²h",
+        "πr²h",
+        "2πrh",
+        "4/3 πr³"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If x = 2 and y = 1 is a solution of the equation 2x + 3y = k, then the value of k is:",
+      "options": [
+        "4",
+        "7",
+        "5",
+        "8"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The supplement of an angle measuring 70° is:",
+      "options": [
+        "20°",
+        "110°",
+        "90°",
+        "180°"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Diagonals of a rhombus are equal and perpendicular to each other. This statement is:",
+      "options": [
+        "Always true",
+        "False (Diagonals are perpendicular, but not necessarily equal in length unless it's a square)",
+        "True only for rectangles",
+        "True for all parallelograms"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The class mark of a class interval 10-25 is:",
+      "options": [
+        "15",
+        "17.5",
+        "20",
+        "12.5"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If (x - 2) is a factor of x³ - 3x + 5a, then the value of a is:",
+      "options": [
+        "-2/5",
+        "2/5",
+        "1",
+        "-1"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The rationalizing factor of (3 + √2) is:",
+      "options": [
+        "3 + √2",
+        "3 - √2",
+        "√2 - 3",
+        "-3 - √2"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If the volume and surface area of a sphere are numerically equal, then its radius is:",
+      "options": [
+        "1 unit",
+        "2 units",
+        "3 units",
+        "4 units"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The number of dimensions a point has is:",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "An exterior angle of a triangle is equal to the:",
+      "options": [
+        "Sum of the two interior opposite angles",
+        "Difference of the two adjacent angles",
+        "Sum of all three angles",
+        "Product of remote interior angles"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If AB = QR, BC = PR, and CA = PQ, then:",
+      "options": [
+        "ΔABC ≅ ΔPQR",
+        "ΔABC ≅ ΔQRP",
+        "ΔABC ≅ ΔRPQ",
+        "ΔPQR ≅ ΔBCA"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The curved surface area of a cone of radius 7 cm and slant height 10 cm is ($\\pi = 22/7$):",
+      "options": [
+        "220 cm²",
+        "440 cm²",
+        "110 cm²",
+        "154 cm²"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If the median of observations 11, 12, 14, (x - 2), (x + 4), 30, 32, 38 arranged in ascending order is 24, then x is:",
+      "options": [
+        "22",
+        "24",
+        "23",
+        "25"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The value of $\\sqrt[3]{64^{-2}}$ is:",
+      "options": [
+        "1/4",
+        "1/16",
+        "4",
+        "16"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In a parallelogram ABCD, if $\\angle A = 70^\\circ$, then $\\angle C$ is:",
+      "options": [
+        "70°",
+        "110°",
+        "140°",
+        "90°"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The base and altitude of a right-angled triangle are 12 cm and 5 cm. Its area is:",
+      "options": [
+        "60 cm²",
+        "30 cm²",
+        "15 cm²",
+        "17 cm²"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The decimal expansion of an irrational number is:",
+      "options": [
+        "Terminating",
+        "Non-terminating recurring",
+        "Non-terminating non-recurring",
+        "Always finite"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Euclid stated that all right angles are equal to one another in the form of a:",
+      "options": [
+        "Axiom",
+        "Definition",
+        "Postulate",
+        "Theorem"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If two lines intersect, then the vertically opposite angles are:",
+      "options": [
+        "Equal",
+        "Complementary",
+        "Supplementary",
+        "Unequal"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The range of the data: 14, 21, 9, 35, 42, 18, 25 is:",
+      "options": [
+        "33",
+        "42",
+        "9",
+        "24"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following points lies on the x-axis?",
+      "options": [
+        "(0, 5)",
+        "(4, 0)",
+        "(2, 3)",
+        "(-1, -1)"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If $x^ + 1/x^2 = 79$, then the value of $x - 1/x$ is:",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "6"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The radius of a sphere is doubled. Its volume becomes how many times the original?",
+      "options": [
+        "2 times",
+        "4 times",
+        "8 times",
+        "16 times"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Two circles of radii 5 cm and 3 cm intersect at two points and the distance between their centres is 4 cm. The length of the common chord is:",
+      "options": [
+        "6 cm",
+        "8 cm",
+        "10 cm",
+        "3 cm"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The probability of getting a number greater than 6 in a single throw of a fair die is:",
+      "options": [
+        "1",
+        "1/6",
+        "0",
+        "1/2"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "If a point C lies between two points A and B such that AC = BC, then:",
+      "options": [
+        "AB = 2AC",
+        "AC = AB",
+        "AB = AC",
+        "AC = 2AB"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The degree of the polynomial $(x^3 - 2)(x^2 + 5)$ is:",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "6"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The perimeter of an equilateral triangle is 60 cm. Its area is:",
+      "options": [
+        "$100\\sqrt{3}\\text{ cm}^2$",
+        "$200\\text{ cm}^2$",
+        "$50\\sqrt{3}\\text{ cm}^2$",
+        "$75\\sqrt{3}\\text{ cm}^2$"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If the mean of five observations x, x+2, x+4, x+6, and x+8 is 11, then the value of x is:",
+      "options": [
+        "5",
+        "7",
+        "9",
+        "11"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The diagonals of a rectangle ABCD intersect at O. If $\\angle ABO = 30^\\circ$, then $\\angle ADB$ is:",
+      "options": [
+        "30°",
+        "60°",
+        "90°",
+        "120°"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
