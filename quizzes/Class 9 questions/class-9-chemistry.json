@@ -1,0 +1,506 @@
+{
+  "title": "Class 9 chemistry",
+  "subject": "Class 9 questions",
+  "questions": [
+    {
+      "question": "Which of the following represents pure substances?",
+      "options": [
+        "Milk",
+        "Sea water",
+        "Iron",
+        "Air"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The process of conversion of a solid directly into gas is called:",
+      "options": [
+        "Vaporisation",
+        "Sublimation",
+        "Condensation",
+        "Freezing"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Boiling point of water on the Kelvin scale is:",
+      "options": [
+        "0 K",
+        "100 K",
+        "273 K",
+        "373 K"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which of the following is a chemical change?",
+      "options": [
+        "Melting of ice",
+        "Dissolving salt in water",
+        "Rusting of iron",
+        "Boiling of water"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The SI unit of mass of atoms and molecules is:",
+      "options": [
+        "Gram",
+        "Kilogram",
+        "Atomic Mass Unit (u)",
+        "Milligram"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The chemical formula of aluminum chloride is:",
+      "options": [
+        "AlCl",
+        "AlCl2",
+        "AlCl3",
+        "Al3Cl"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The number of atoms present in a molecule of ozone (O3) is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cathode rays consist of a stream of:",
+      "options": [
+        "Protons",
+        "Neutrons",
+        "Electrons",
+        "Alpha particles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who discovered the neutron?",
+      "options": [
+        "J.J. Thomson",
+        "Ernest Rutherford",
+        "James Chadwick",
+        "Goldstein"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Isotopes have:",
+      "options": [
+        "Same number of protons but different number of neutrons",
+        "Same number of neutrons but different protons",
+        "Different atomic numbers",
+        "Same mass number always"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The mass of one mole of carbon dioxide (CO2) is:",
+      "options": [
+        "12 g",
+        "22 g",
+        "44 g",
+        "16 g"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following has maximum number of atoms?",
+      "options": [
+        "18 g of water (H2O)",
+        "18 g of oxygen (O2)",
+        "18 g of carbon dioxide (CO2)",
+        "18 g of methane (CH4)"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Brownian motion provides evidence for:",
+      "options": [
+        "Particle nature of matter",
+        "Wave nature of light",
+        "Electrical nature of atoms",
+        "Presence of nucleus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A mixture of chalk powder and water can be separated by:",
+      "options": [
+        "Filtration",
+        "Evaporation",
+        "Distillation",
+        "Sublimation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tincture of iodine has iodine as solute and the solvent is:",
+      "options": [
+        "Water",
+        "Alcohol",
+        "Benzene",
+        "Ether"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Centrifugation is used for separating:",
+      "options": [
+        "Cream from milk",
+        "Salt from sea water",
+        "Camphor from salt",
+        "Water from alcohol"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fog is an example of which type of colloidal system?",
+      "options": [
+        "Aerosol (liquid in gas)",
+        "Foam",
+        "Emulsion",
+        "Sol"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following elements is a metalloid?",
+      "options": [
+        "Sodium",
+        "Silicon",
+        "Carbon",
+        "Sulfur"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The valency of nitrogen in ammonia (NH3) is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Atomic number of an element is equal to:",
+      "options": [
+        "Number of protons in the nucleus",
+        "Number of neutrons",
+        "Sum of protons and neutrons",
+        "Number of valence electrons"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Rutherford's alpha-particle scattering experiment led to the discovery of:",
+      "options": [
+        "Electron",
+        "Atomic nucleus",
+        "Neutron",
+        "Proton"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The electronic configuration of chlorine (Atomic number 17) is:",
+      "options": [
+        "2, 8, 7",
+        "2, 7, 8",
+        "2, 8, 8, 1",
+        "2, 8, 5"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Isobars are atoms having:",
+      "options": [
+        "Same atomic number and different mass numbers",
+        "Same mass number and different atomic numbers",
+        "Same number of neutrons only",
+        "Identical chemical properties"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The formula mass of sodium chloride (NaCl) is (Na=23, Cl=35.5):",
+      "options": [
+        "36.5 u",
+        "58.5 u",
+        "45.5 u",
+        "50 u"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Number of moles in 52 g of helium (He, Atomic mass = 4 u) is:",
+      "options": [
+        "10",
+        "13",
+        "26",
+        "52"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Latent heat of vaporization is the heat required to change:",
+      "options": [
+        "Solid to liquid at melting point",
+        "Liquid to gas at boiling point without temperature change",
+        "Solid directly to gas",
+        "Gas to liquid"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Rate of evaporation increases with:",
+      "options": [
+        "Increase in surface area, temperature, and wind speed",
+        "Increase in humidity",
+        "Decrease in temperature",
+        "High moisture content in air"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following is a physical change?",
+      "options": [
+        "Burning of paper",
+        "Rusting of almirah",
+        "Glowing of an electric bulb",
+        "Digestion of food"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Tyndall effect is shown by:",
+      "options": [
+        "True solutions",
+        "Colloidal solutions",
+        "Suspensions",
+        "Pure compounds"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chromatography is based on the principle of:",
+      "options": [
+        "Difference in solubility of solutes in same solvent",
+        "Difference in boiling points",
+        "Difference in densities",
+        "Sublimation property"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The gas evolved when dilute hydrochloric acid reacts with iron filling is:",
+      "options": [
+        "Oxygen",
+        "Chlorine",
+        "Hydrogen",
+        "Carbon dioxide"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Law of constant proportion was stated by:",
+      "options": [
+        "Antoine Lavoisier",
+        "Joseph Proust",
+        "John Dalton",
+        "Amedeo Avogadro"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "One atomic mass unit (1 u) is equal to:",
+      "options": [
+        "1/12th mass of carbon-12 atom",
+        "Mass of one hydrogen atom",
+        "1/16th mass of oxygen-16 atom",
+        "Mass of one carbon-12 atom"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Canal rays discovered by Goldstein were positively charged particles known as:",
+      "options": [
+        "Electrons",
+        "Protons",
+        "Neutrons",
+        "Positrons"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Shells in an atom are represented by the letters:",
+      "options": [
+        "K, L, M, N...",
+        "A, B, C, D...",
+        "X, Y, Z...",
+        "P, Q, R, S..."
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Maximum number of electrons accommodated in the 'M' shell (n=3) is:",
+      "options": [
+        "2",
+        "8",
+        "18",
+        "32"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Elements with stable electronic configuration (8 valence electrons) have valency:",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "8"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Deuterium and Tritium are isotopes of:",
+      "options": [
+        "Carbon",
+        "Oxygen",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The percentage of nitrogen in urea [CO(NH2)2] is (C=12, O=16, N=14, H=1):",
+      "options": [
+        "23.3%",
+        "46.6%",
+        "35%",
+        "50%"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Volume occupied by 1 mole of any gas at STP (Standard Temperature and Pressure) is:",
+      "options": [
+        "11.2 liters",
+        "22.4 liters",
+        "44.8 liters",
+        "1 liter"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The temperature at which a solid melts to become a liquid at atmospheric pressure is called:",
+      "options": [
+        "Boiling point",
+        "Melting point",
+        "Dew point",
+        "Critical point"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Dry ice is:",
+      "options": [
+        "Solid water",
+        "Solid carbon dioxide",
+        "Solid sulfur dioxide",
+        "Liquid nitrogen"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Crystallization technique is better than evaporation because:",
+      "options": [
+        "Solid decomposes on heating during evaporation, but not in crystallization",
+        "It takes less time",
+        "It requires no equipment",
+        "Impurities do not dissolve at all"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A solution contains 40 g of common salt in 320 g of water. The concentration of solution is:",
+      "options": [
+        "10%",
+        "11.1%",
+        "12.5%",
+        "15%"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The subatomic particle that does not carry any electrical charge is:",
+      "options": [
+        "Electron",
+        "Proton",
+        "Neutron",
+        "Positron"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The valency of magnesium in magnesium oxide (MgO) is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following is triatomic?",
+      "options": [
+        "Helium",
+        "Oxygen",
+        "Carbon dioxide",
+        "Hydrogen"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "State of matter having maximum compressibility is:",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Plasma"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Avogadro's number ($N_A$) has the value:",
+      "options": [
+        "$6.022 \\times 10^{23}$",
+        "$6.022 \\times 10^{20}$",
+        "$3.14 \\times 10^{23}$",
+        "$1.6 \\times 10^{-19}$"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The chemical symbol of element Sodium is derived from its Latin name:",
+      "options": [
+        "Kalium",
+        "Natrium",
+        "Cuprum",
+        "Ferrum"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
