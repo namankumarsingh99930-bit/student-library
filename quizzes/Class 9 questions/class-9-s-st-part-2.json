@@ -1,0 +1,486 @@
+{
+  "title": "Class 9 S.st part 2",
+  "subject": "Class 9 questions",
+  "questions": [
+    {
+      "question": "Oceans cover approximately what percentage of the Earth's surface?",
+      "options": [
+        "50%",
+        "71%",
+        "30%",
+        "85%"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The periodic rise and fall of ocean waters caused by the gravitational pull of the moon and the sun are called:",
+      "options": [
+        "Tides",
+        "Tsunamis",
+        "Ocean currents",
+        "Continental drifts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which oceanic phenomenon can be triggered by undersea earthquakes or volcanic eruptions?",
+      "options": [
+        "Tidal bore",
+        "Tsunami",
+        "Surface wave swell",
+        "Gyre formation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Biomes are defined as large-scale ecological areas characterized by distinct:",
+      "options": [
+        "Political boundaries",
+        "Plant and animal communities adapted to their environment",
+        "Industrial output levels",
+        "Currency exchange systems"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Ecotourism primarily promotes travel to natural areas with the objective of:",
+      "options": [
+        "Maximizing heavy commercial resource extraction",
+        "Conserving the environment and improving the well-being of local people",
+        "Establishing massive urban entertainment parks",
+        "Converting forests into agricultural farmland"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The architectural style featuring intricate temple construction and regional art forms flourished brilliantly in India during which historical epoch?",
+      "options": [
+        "1000–1700 CE",
+        "Upper Palaeolithic period",
+        "Pre-historic stone age",
+        "Modern digital era"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Economic expansion during the medieval period in India (1000–1700 CE) was heavily boosted by:",
+      "options": [
+        "Internal and international maritime/land trade networks",
+        "Complete cessation of all commercial transactions",
+        "Total reliance on barter systems without coinage",
+        "Isolation from global trade routes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Democratic institutions face significant challenges when there is a lack of:",
+      "options": [
+        "Active civic participation and transparency",
+        "Excessive public debate",
+        "Regular multi-party elections",
+        "Independent judicial review"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fiscal policy managed by governments typically involves decisions regarding:",
+      "options": [
+        "Taxation and public government spending",
+        "Daily weather forecasting",
+        "Tectonic plate monitoring",
+        "Archaeological excavation permits"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Market equilibrium price shifts upward if:",
+      "options": [
+        "Demand increases while supply remains constant",
+        "Supply increases while demand drops to zero",
+        "Consumers stop buying entirely",
+        "Government imposes a strict price ceiling below equilibrium"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Ocean currents running along coastlines directly influence regional:",
+      "options": [
+        "Climate and temperature patterns",
+        "Alphabet literacy rates",
+        "Constitutional amendments",
+        "Parliamentary election results"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Biodiversity conservation is essential because it maintains:",
+      "options": [
+        "Ecological balance and life-support systems",
+        "Global stock market volatility",
+        "Fossil fuel reserves underground",
+        "Constant atmospheric pressure"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The Bhakti and Sufi movements shared a common emphasis on:",
+      "options": [
+        "Universal brotherhood, devotion, and rejection of rigid social divisions",
+        "Military conquest of foreign territories",
+        "Accumulation of massive royal wealth",
+        "Strict adherence to complex liturgical Sanskrit texts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Sustainable development can be defined as development that:",
+      "options": [
+        "Meets the needs of the present without compromising the ability of future generations to meet their own needs",
+        "Exhausts all natural resources as quickly as possible",
+        "Focuses solely on short-term corporate profit margins",
+        "Relies entirely on non-renewable fossil fuels"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The central banking institution of India that regulates currency and monetary policy is the:",
+      "options": [
+        "State Bank of India",
+        "Reserve Bank of India",
+        "World Bank",
+        "Securities and Exchange Board"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Ocean relief features include deep underwater troughs known as:",
+      "options": [
+        "Continental shelves",
+        "Oceanic trenches",
+        "Abyssal plains only",
+        "Mid-ocean ridges"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cyclones are intense atmospheric low-pressure systems characterized by:",
+      "options": [
+        "Clear skies and absolute calm",
+        "High-speed swirling winds and heavy torrential rainfall",
+        "Freezing blizzard conditions",
+        "Stable seismic inactivity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Wildlife sanctuaries and national parks are established primarily to protect:",
+      "options": [
+        "Commercial timber harvesting",
+        "Natural habitats and endangered species from extinction",
+        "Urban real estate expansion projects",
+        "Mining exploration operations"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The integration of diverse cultural, artistic, and philosophical traditions between 1000 and 1700 CE led to the enrichment of:",
+      "options": [
+        "Composite Indian culture and heritage",
+        "Isolated tribal languages only",
+        "Uniform global legal codes",
+        "Ancient nomadic hunting practices"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Consumer awareness and financial education help citizens avoid falling prey to:",
+      "options": [
+        "Transparent banking systems",
+        "Predatory lending and fraudulent financial schemes",
+        "Standardized savings accounts",
+        "Regulated market price mechanisms"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which instrument is used to measure atmospheric pressure?",
+      "options": [
+        "Thermometer",
+        "Barometer",
+        "Anemometer",
+        "Rain gauge"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Tectonic subduction zones occur where:",
+      "options": [
+        "Two plates pull apart from each other",
+        "One tectonic plate slides beneath another into the mantle",
+        "Plates slide horizontally past each other without vertical motion",
+        "Oceanic water evaporates completely"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The distribution of global temperature is primarily determined by:",
+      "options": [
+        "Latitude and distance from the equator",
+        "National political boundaries",
+        "Stock market fluctuations",
+        "Local currency values"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Deforestation directly contributes to which major global environmental crisis?",
+      "options": [
+        "Expansion of polar ice sheets",
+        "Enhanced climate change and loss of habitat biodiversity",
+        "Stabilization of atmospheric carbon dioxide",
+        "Increase in deep ocean trench depths"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Economic choices under scarcity require individuals and societies to evaluate:",
+      "options": [
+        "Trade-offs and opportunity costs",
+        "Infinite resource availability",
+        "Zero-sum mathematical equations only",
+        "Random lottery outcomes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In democratic governance, the rule of law implies that:",
+      "options": [
+        "Rulers are above the law",
+        "All citizens, including government officials, are subject to the same laws",
+        "Laws change daily based on popular whims",
+        "Judges hold absolute dictatorial powers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The term 'Gross Domestic Product' (GDP) measures:",
+      "options": [
+        "The total market value of all finished goods and services produced within a country in a given period",
+        "The total physical weight of agricultural exports",
+        "The average rainfall recorded nationwide annually",
+        "The total government debt accumulated over a century"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The ecological footprint measures human demand on:",
+      "options": [
+        "Earth's ecosystems and natural regenerative capacity",
+        "Digital internet bandwidth consumption",
+        "Global gold reserve quantities",
+        "Planetary orbital velocity"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Architectural marvels like the Taj Mahal and various regional temple complexes exemplify the mastery of engineering and art during:",
+      "options": [
+        "The medieval period (1000–1700 CE)",
+        "The ancient Stone Age",
+        "The modern space age",
+        "The early Palaeolithic era"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Market failure due to externalities occurs when:",
+      "options": [
+        "Production or consumption imposes uncompensated costs or benefits on third parties",
+        "Buyers and sellers agree on a fair price instantly",
+        "Supply exactly equals demand across all sectors",
+        "Government tax collection matches public expenditure"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The preservation of natural biomes is critical for maintaining global:",
+      "options": [
+        "Carbon cycles and oxygen production",
+        "Stock exchange trading hours",
+        "Internet fiber-optic routing speeds",
+        "Standardized international time zones"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A progressive tax system is designed so that the tax rate:",
+      "options": [
+        "Increases as the taxable income increases",
+        "Decreases for higher income brackets",
+        "Remains strictly fixed regardless of earnings",
+        "Applies only to agricultural produce"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The movement of surface water in the oceans in specific prevailing directions forms:",
+      "options": [
+        "Ocean currents",
+        "Seismic fault lines",
+        "Atmospheric jet streams",
+        "Tectonic plate boundaries"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Community-based conservation programs empower local populations to protect:",
+      "options": [
+        "Their surrounding forests, wildlife, and water resources sustainably",
+        "Multinational mining corporations",
+        "Heavy industrial manufacturing units",
+        "Urban speculative real estate markets"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The synthesis of diverse regional administrative practices during the medieval era laid down foundations for:",
+      "options": [
+        "Modern administrative continuity and institutional structures",
+        "Total political chaos and anarchy",
+        "Nomadic tribal migration patterns",
+        "Complete abandonment of written records"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Financial planning and prudent budgeting enable households to build security against:",
+      "options": [
+        "Unexpected economic emergencies and inflation",
+        "Seasonal shifts in tectonic plates",
+        "Variations in solar radiation intensity",
+        "Historical changes in calendar years"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Global climate change is primarily accelerated by anthropogenic emissions of:",
+      "options": [
+        "Oxygen gas",
+        "Greenhouse gases like carbon dioxide and methane",
+        "Water vapor from natural rain clouds",
+        "Inert nitrogen gas"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The principle of checks and balances in a democracy ensures that:",
+      "options": [
+        "No single branch of government acquires absolute, unchecked power",
+        "Financial checks clear instantly in banks",
+        "Elections are monitored by foreign militaries",
+        "Citizens pay zero taxes to the state"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Sustainable management of ocean resources prevents:",
+      "options": [
+        "Overfishing and permanent depletion of marine life",
+        "Normal gravitational tidal movements",
+        "Natural ocean salinity variations",
+        "Seasonal coastal wind breezes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The emergence of rich vernacular literatures and musical traditions in India between 1000 and 1700 CE was deeply connected to:",
+      "options": [
+        "The Bhakti and Sufi cultural movements",
+        "Strict bans on regional languages by empires",
+        "Complete isolation from foreign cultural exchanges",
+        "The invention of digital printing presses"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Economic scarcity forces societies to answer which fundamental questions regarding production?",
+      "options": [
+        "What to produce, how to produce, and for whom to produce",
+        "How to stop all market transactions permanently",
+        "Where to relocate the capital city annually",
+        "Which foreign language to adopt as national currency"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tsunamis are characterized in deep ocean waters by:",
+      "options": [
+        "Tremendous wavelength and very low height, making them hard to notice until they reach shallow coastal zones",
+        "Massive towering walls of water across the open ocean basin",
+        "Complete stillness of the water surface",
+        "Rapid circular whirlpools localized to single points"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Biodiversity hotspots are regions characterized by:",
+      "options": [
+        "High levels of endemic species facing severe habitat threat",
+        "Zero human presence and absolute desert conditions",
+        "Maximum industrial manufacturing output",
+        "Complete absence of plant life"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Monetary policy tools used by central banks include adjusting:",
+      "options": [
+        "Interest rates and reserve requirements",
+        "Public park maintenance schedules",
+        "High school curriculum guidelines",
+        "National highway toll tariffs"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The expansion of trade networks from 1000 to 1700 CE facilitated the exchange of not just goods, but also:",
+      "options": [
+        "Scientific knowledge, technologies, and cultural ideas",
+        "Digital software and internet protocols",
+        "Nuclear weaponry designs",
+        "Modern synthetic medicines"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Civic engagement in a democracy goes beyond voting and includes:",
+      "options": [
+        "Public debates, community organizing, and holding leaders accountable",
+        "Remaining entirely silent on public policy matters",
+        "Violating laws to prove a personal point",
+        "Avoiding all forms of societal interaction"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The primary objective of financial budgeting is to:",
+      "options": [
+        "Balance income and expenditures while setting aside savings for future goals",
+        "Maximize unsecured debt liabilities",
+        "Eliminate the necessity of earning an income",
+        "Ignore future price inflation trends"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Integrated Social Science curricula aim to help students understand the complex relationships between:",
+      "options": [
+        "Human societies, historical processes, spatial environments, and economic systems",
+        "Isolated laboratory chemical compounds",
+        "Abstract mathematical formulas alone",
+        "Purely fictional narrative storytelling"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
