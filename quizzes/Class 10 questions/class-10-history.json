@@ -1,0 +1,506 @@
+{
+  "title": "Class 10 history",
+  "subject": "Class 10 questions",
+  "questions": [
+    {
+      "question": "Who painted the famous image of 'The Dream of Worldwide Democratic and Social Republics' in 1848?",
+      "options": [
+        "Giuseppe Mazzini",
+        "Frédéric Sorrieu",
+        "Ernst Renan",
+        "Count Cavour"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the main aim of the Treaty of Vienna of 1815?",
+      "options": [
+        "To restore the monarchies overthrown by Napoleon",
+        "To spread the ideas of the French Revolution",
+        "To unify Germany and Italy",
+        "To establish a democratic republic in Europe"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which secret society was founded by Giuseppe Mazzini in Marseilles?",
+      "options": [
+        "Young Italy",
+        "Carbonari",
+        "Zollverein",
+        "Red Shirts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The First World War left a deep imprint on India by creating a new economic and political situation. Which of the following was introduced during this time?",
+      "options": [
+        "Income tax introduced and custom duties increased",
+        "Reduction in taxes",
+        "Free trade with European nations",
+        "Abolition of the army recruitment"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which year did Mahatma Gandhi return to India from South Africa?",
+      "options": [
+        "1914",
+        "1915",
+        "1916",
+        "1917"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Mahatma Gandhi organize a satyagraha in Kheda district of Gujarat?",
+      "options": [
+        "To protest against high revenue demand due to crop failure",
+        "To support mill workers",
+        "Against the Salt Tax",
+        "Against the Rowlatt Act"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The famous Salt March led by Mahatma Gandhi was from Sabarmati to which coastal place?",
+      "options": [
+        "Dandi",
+        "Surat",
+        "Porbandar",
+        "Ahmedabad"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who composed the song 'Vande Mataram' during the national movement?",
+      "options": [
+        "Rabindranath Tagore",
+        "Bankim Chandra Chattopadhyay",
+        "Abanindranath Tagore",
+        "Subhash Chandra Bose"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the main reason for the boycott of the Simon Commission in India?",
+      "options": [
+        "It was formed to oppress Indian industries",
+        "It did not have any Indian member in it",
+        "It proposed high taxation",
+        "It favored the partition of Bengal"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which pact resolved the issue of separate electorates for the depressed classes between Gandhiji and Dr. B.R. Ambedkar in 1932?",
+      "options": [
+        "Lucknow Pact",
+        "Poona Pact",
+        "Gandhi-Irwin Pact",
+        "Nagpur Pact"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When and where was the demand for 'Purna Swaraj' (Full Independence) formalized?",
+      "options": [
+        "December 1929, Lahore Session",
+        "December 1920, Nagpur Session",
+        "March 1931, Karachi Session",
+        "1927, Madras Session"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were the first printed books in China produced using?",
+      "options": [
+        "Hand printing system",
+        "Mechanical press",
+        "Woodblock printing",
+        "Both A and C (Woodblocks were hand-pressed)"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who developed the first known printing press in the 1430s?",
+      "options": [
+        "Marco Polo",
+        "Gutenberg",
+        "Erasmus",
+        "Richard Hoe"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was 'Chapmen' in the context of 17th-century print culture in England?",
+      "options": [
+        "Rich landowners",
+        "Pedlars who sold low-priced books called penny chapbooks",
+        "Royal printers",
+        "Religious priests"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The book 'Gulamgiri' written in 1871 exposing caste injustices was authored by:",
+      "options": [
+        "B.R. Ambedkar",
+        "Jyotirao Phule",
+        "Periyar Ramaswami",
+        "Mahatma Gandhi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which vernacular newspaper was abruptly censored by the British in 1878, fearing nationalist criticism?",
+      "options": [
+        "The Hindu",
+        "Amrita Bazar Patrika",
+        "Vernacular Press Act targets like Som Prakash",
+        "Kesari"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does 'Silk Routes' signify in global history?",
+      "options": [
+        "Only silk trade routes between China and Rome",
+        "Vibrant pre-modern trade and cultural links between distant parts of the world",
+        "Sea routes discovered by Portuguese",
+        "Trade routes restricted to India and Europe"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which disease had a terrifying impact on the livelihoods of people and the livestock economy of Africa in the 1890s?",
+      "options": [
+        "Smallpox",
+        "Rinderpest",
+        "Cholera",
+        "Plague"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the term used for indentured Indian labor migration under a contract?",
+      "options": [
+        "Girmitiyas",
+        "Coolies",
+        "Sepoys",
+        "Mansabdars"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was the writer of the famous novel 'Chokher Bali'?",
+      "options": [
+        "Bankim Chandra",
+        "Rabindranath Tagore",
+        "Sarat Chandra Chattopadhyay",
+        "Premchand"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The \"Iron Chancellor\" who played a key role in the unification of Germany was:",
+      "options": [
+        "Kaiser William I",
+        "Otto von Bismarck",
+        "Giuseppe Garibaldi",
+        "Victor Emmanuel II"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year did the famous Jallianwala Bagh massacre take place?",
+      "options": [
+        "13 April 1919",
+        "10 May 1857",
+        "5 February 1922",
+        "26 January 1930"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The Non-Cooperation-Khilafat Movement began in:",
+      "options": [
+        "January 1921",
+        "August 1920",
+        "February 1922",
+        "December 1929"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which movement was called off by Mahatma Gandhi due to the Chauri Chaura violence?",
+      "options": [
+        "Civil Disobedience Movement",
+        "Non-Cooperation Movement",
+        "Quit India Movement",
+        "Rowlatt Satyagraha"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who painted the iconic image of 'Bharat Mata' as an ascetic figure holding beads, a cloth, and food in 1905?",
+      "options": [
+        "Abanindranath Tagore",
+        "Raja Ravi Varma",
+        "Nandalal Bose",
+        "Rabindranath Tagore"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The 'Raskolnikov' or similar cheap pocket books in 19th-century France were known as:",
+      "options": [
+        "Bibliotheque Bleue",
+        "Penny Dreadfuls",
+        "Chapbooks",
+        "Almanac"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the objective of the Rowlatt Act passed in 1919?",
+      "options": [
+        "To give more power to local self-governments",
+        "To curb nationalist upsurge and allow detention of political prisoners without trial for 2 years",
+        "To introduce free primary education",
+        "To encourage cottage industries"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who formed the 'Oora Swaraj' or Khilafat Committee in Awadh?",
+      "options": [
+        "Baba Ramchandra",
+        "Alluri Sitarama Raju",
+        "Jawaharlal Nehru",
+        "Shaukat Ali"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The tribal peasants of Gudem Hills (Andhra Pradesh) revolted under the leadership of:",
+      "options": [
+        "Alluri Sitarama Raju",
+        "Birsa Munda",
+        "Rani Gaidinliu",
+        "Mahatma Gandhi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Under the Inland Emigration Act of 1859, plantation workers were not permitted to:",
+      "options": [
+        "Leave the tea gardens without permission",
+        "Form trade unions",
+        "Speak their native language",
+        "Vote in elections"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who led the peasant movement in Bardoli in 1928 against enhanced land revenue?",
+      "options": [
+        "Vallabhbhai Patel",
+        "Jawaharlal Nehru",
+        "Rajendra Prasad",
+        "Motilal Nehru"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The Lahore Congress session of December 1929 was presided over by:",
+      "options": [
+        "Mahatma Gandhi",
+        "Subhash Chandra Bose",
+        "Jawaharlal Nehru",
+        "Sardar Vallabhbhai Patel"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The Quit India resolution was passed by the All-India Congress Committee in:",
+      "options": [
+        "Bombay, August 1942",
+        "Delhi, July 1942",
+        "Wardha, October 1941",
+        "Calcutta, December 1942"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The first English language newspaper published in India by James Augustus Hickey was:",
+      "options": [
+        "Bengal Gazette",
+        "India Gazette",
+        "Bombay Herald",
+        "Calcutta Chronicle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Martin Luther's writings marked the beginning of which major movement in Europe?",
+      "options": [
+        "Industrial Revolution",
+        "Protestant Reformation",
+        "Renaissance",
+        "Scientific Revolution"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the main export item from India to Britain during the early 19th century under colonial rule?",
+      "options": [
+        "Manufactured cotton clothes",
+        "Raw cotton and food grains",
+        "Finished steel goods",
+        "Automobiles"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the 'Hinterland' of a port?",
+      "options": [
+        "The deep interior sea zone",
+        "The remote rural area supplying goods to the port city",
+        "The custom tax office",
+        "The dockyard workshop"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which global financial institution was set up at the Bretton Woods conference to finance post-war reconstruction?",
+      "options": [
+        "World Trade Organization (WTO)",
+        "International Bank for Reconstruction and Development (World Bank)",
+        "International Monetary Fund (IMF)",
+        "Asian Development Bank"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The shift of global manufacturing hub to which country in recent decades has changed world trade patterns?",
+      "options": [
+        "USA",
+        "China",
+        "Japan",
+        "Britain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the term 'New Deal' introduced by US President Franklin D. Roosevelt refer to?",
+      "options": [
+        "Relief measures for victims of the Great Depression",
+        "A trade pact with European powers",
+        "Military alliances after WW2",
+        "A treaty to lower global tariffs"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The industrial growth in India picked up significantly after:",
+      "options": [
+        "The First World War, as British mills got busy with war production",
+        "The Revolt of 1857",
+        "The introduction of railways in 1853",
+        "The East India Company charter of 1813"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "European powers met in 1885 at which conference to divide Africa among themselves?",
+      "options": [
+        "Berlin Conference",
+        "Vienna Congress",
+        "Paris Peace Conference",
+        "Yalta Conference"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The mass production system was popularized in the US by car manufacturer:",
+      "options": [
+        "Henry Ford",
+        "Thomas Edison",
+        "Wright Brothers",
+        "Andrew Carnegie"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the primary objective of the Vernacular Press Act of 1878?",
+      "options": [
+        "To promote local language publishing",
+        "To provide financial aid to Indian newspapers",
+        "To provide the government extensive rights to censor reports and editorials in vernacular press",
+        "To encourage English education"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In 1517, the religious reformer Martin Luther wrote the 'Ninety-Five Theses' criticizing:",
+      "options": [
+        "The political authority of kings",
+        "The practices and rituals of the Catholic Church",
+        "The feudal economic system",
+        "The print technology"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following social groups was known as 'Digars' or specific radical thinkers during the French Revolution period?",
+      "options": [
+        "Artists and painters",
+        "Printers and publishers",
+        "Philosophers and writers like Rousseau and Voltaire",
+        "Landlords"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who brought the first printing press to India (Goa) in the mid-16th century?",
+      "options": [
+        "British merchants",
+        "Portuguese missionaries",
+        "French traders",
+        "Dutch officials"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In East Asia (China, Japan, Korea), printing technology was first developed using:",
+      "options": [
+        "Metal movable type",
+        "Hand-held wooden blocks",
+        "Rotary steam presses",
+        "Lithography"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The book containing collection of folk tales compiled by the Brothers Grimm in Germany aimed at:",
+      "options": [
+        "Promoting scientific temper",
+        "Building a shared German national identity",
+        "Teaching mathematics to children",
+        "Critiquing monarchy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "QC) What was the immediate cause for the launch of the Civil Disobedience Movement?",
+      "options": [
+        "Violation of the Salt Law by Gandhi at Dandi",
+        "Arrival of Simon Commission",
+        "Jallianwala Bagh massacre",
+        "Chauri Chaura incident"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
