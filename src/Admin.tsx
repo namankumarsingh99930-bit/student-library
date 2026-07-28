@@ -480,7 +480,7 @@ function emptyQuestion(): QuizQuestionDraft {
 }
 
 function QuizTab({ password }: { password: string }) {
-  const [library, setLibrary] = useState<LibraryData | null>(null);
+  const [quizIndex, setQuizIndex] = useState<QuizIndex | null>(null);
   const [subjectMode, setSubjectMode] = useState<'existing' | 'new'>('existing');
   const [selectedSubject, setSelectedSubject] = useState('');
   const [newSubject, setNewSubject] = useState('');
@@ -492,9 +492,13 @@ function QuizTab({ password }: { password: string }) {
   const [bulkText, setBulkText] = useState('');
   const [bulkError, setBulkError] = useState('');
 
-  useEffect(() => {
-    fetchLibrary().then(setLibrary).catch(() => {});
+  const loadQuizIndex = useCallback(() => {
+    fetchQuizIndex().then(setQuizIndex).catch(() => {});
   }, []);
+
+  useEffect(() => {
+    loadQuizIndex();
+  }, [loadQuizIndex]);
 
   const subject = subjectMode === 'existing' ? selectedSubject : newSubject.trim();
 
@@ -590,6 +594,7 @@ function QuizTab({ password }: { password: string }) {
       setMessage(`Quiz "${quizTitle}" published to ${subject}.`);
       setQuizTitle('');
       setQuestions([emptyQuestion()]);
+      loadQuizIndex();
     } catch (err: any) {
       setStatus('error');
       setMessage(err.message || 'Could not publish quiz.');
@@ -625,7 +630,7 @@ function QuizTab({ password }: { password: string }) {
             className="w-full px-3.5 py-2.5 rounded-xl border border-line text-sm focus:outline-none focus:border-shelf"
           >
             <option value="">Select a subject…</option>
-            {library?.subjects.map((s) => (
+            {quizIndex?.subjects.map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>

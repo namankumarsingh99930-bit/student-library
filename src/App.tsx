@@ -283,6 +283,30 @@ export default function App() {
 
           {!loading && !loadError && library && route.view === 'home' && (
             <>
+              <a
+                href="/quiz"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/quiz');
+                }}
+                className="group flex items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-index to-amber-500 px-6 py-6 sm:py-7 mb-9 shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center shrink-0">
+                    <HelpCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-display font-bold text-xl sm:text-2xl text-white leading-tight">
+                      Test yourself — Take a Quiz
+                    </div>
+                    <div className="text-white/90 text-sm mt-0.5">Pick a subject and see how you score</div>
+                  </div>
+                </div>
+                <span className="hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-white/20 text-white text-xl shrink-0 group-hover:bg-white/30 transition-colors">
+                  →
+                </span>
+              </a>
+
               {recentBooks.length > 0 && (
                 <div className="mb-9">
                   <div className="flex items-center gap-1.5 mb-3">
