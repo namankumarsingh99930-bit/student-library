@@ -1,0 +1,506 @@
+{
+  "title": "Class 10 physics",
+  "subject": "Class 10 questions",
+  "questions": [
+    {
+      "question": "What is the focal length of a plane mirror?",
+      "options": [
+        "Zero",
+        "Positive",
+        "Negative",
+        "Infinity"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which mirror is used by dentists to examine teeth?",
+      "options": [
+        "Plane mirror",
+        "Concave mirror",
+        "Convex mirror",
+        "Cylindrical mirror"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The refractive index of diamond is 2.42. What does this statement mean?",
+      "options": [
+        "Speed of light in diamond is 2.42 times the speed in vacuum",
+        "Speed of light in vacuum is 2.42 times the speed in diamond",
+        "Density of diamond is 2.42",
+        "Diamond absorbs 2.42% of light"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When light enters from a rarer medium to a denser medium, it bends:",
+      "options": [
+        "Away from the normal",
+        "Towards the normal",
+        "Undeviated",
+        "Parallel to the interface"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The power of a lens is -2.5 D. What is its focal length and nature?",
+      "options": [
+        "-0.4 m, Concave",
+        "+0.4 m, Convex",
+        "-2.5 m, Concave",
+        "+2.5 m, Convex"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "An object is placed at a distance of 10 cm in front of a convex mirror of focal length 15 cm. The image position is:",
+      "options": [
+        "-6 cm",
+        "+6 cm",
+        "-30 cm",
+        "+30 cm"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The image formed by a concave mirror is real, inverted and of the same size as the object. The position of the object is:",
+      "options": [
+        "At the focus",
+        "At the centre of curvature",
+        "Between focus and centre of curvature",
+        "Beyond the centre of curvature"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Refraction of light is caused by:",
+      "options": [
+        "Change in frequency of light",
+        "Change in wavelength of light",
+        "Change in speed of light as it enters another medium",
+        "Reflection from the surface"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The angle of incidence is equal to the angle of reflection in:",
+      "options": [
+        "Only plane mirrors",
+        "Only concave mirrors",
+        "Only convex mirrors",
+        "All spherical and plane mirrors"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which of the following lenses would you prefer to use while reading small letters found in a dictionary?",
+      "options": [
+        "A convex lens of focal length 50 cm",
+        "A concave lens of focal length 50 cm",
+        "A convex lens of focal length 5 cm",
+        "A concave lens of focal length 5 cm"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The magnification produced by a rear-view mirror fitted in vehicles is:",
+      "options": [
+        "Less than one",
+        "Greater than one",
+        "Equal to one",
+        "Can be more or less than one depending on distance"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A ray of light passing through the centre of curvature of a concave mirror reflects back along the same path because:",
+      "options": [
+        "Angle of incidence is 90°",
+        "Angle of incidence is 0°",
+        "Mirror is flat at the centre",
+        "It does not obey laws of reflection"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Absolute refractive index of a medium is always:",
+      "options": [
+        "Less than 1",
+        "Equal to 1",
+        "Greater than 1",
+        "Zero"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "If the magnification of a lens is +2, the image formed is:",
+      "options": [
+        "Real and inverted",
+        "Virtual and erect",
+        "Real and erect",
+        "Virtual and inverted"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A student traces the path of a ray of light passing through a rectangular glass slab for different values of angle of incidence. He observes that the angle of emergence is:",
+      "options": [
+        "Always greater than angle of incidence",
+        "Always less than angle of incidence",
+        "Equal to the angle of incidence",
+        "Equal to 90 degrees"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The ability of the eye lens to adjust its focal length is called:",
+      "options": [
+        "Power of accommodation",
+        "Dispersion",
+        "Persistence of vision",
+        "Far point adjustment"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A person cannot see objects distinctly placed beyond 2 m. The power of the lens required to correct this defect is:",
+      "options": [
+        "-0.5 D",
+        "+0.5 D",
+        "-2.0 D",
+        "+2.0 D"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The split-up of white light into its component colors is called:",
+      "options": [
+        "Reflection",
+        "Refraction",
+        "Dispersion",
+        "Scattering"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The colour of light that deviates the maximum in a prism dispersion spectrum is:",
+      "options": [
+        "Red",
+        "Yellow",
+        "Green",
+        "Violet"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Twinkling of stars is primarily due to:",
+      "options": [
+        "Dispersion of starlight by atmosphere",
+        "Atmospheric refraction of starlight",
+        "Scattering of starlight by dust particles",
+        "Reflection of light from clouds"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The clear sky appears blue because:",
+      "options": [
+        "Blue light gets absorbed in the atmosphere",
+        "Ultraviolet radiations are absorbed by ozone",
+        "Violet and blue lights are scattered more than lights of all other colors by the atmosphere",
+        "Light of red color is scattered the most"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "At sunrise or sunset, the sun appears reddish because:",
+      "options": [
+        "All other colors scatter away and only red reaches our eyes",
+        "Red color is scattered maximum by atmosphere",
+        "Sun emits only red light at that time",
+        "Earth's atmosphere becomes thickest at sunrise"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The least distance of distinct vision for a young adult with normal vision is about:",
+      "options": [
+        "25 m",
+        "2.5 cm",
+        "25 cm",
+        "2.5 m"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The part of the eye that controls the amount of light entering the eye is:",
+      "options": [
+        "Retina",
+        "Cornea",
+        "Pupil",
+        "Iris"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Myopia is also known as:",
+      "options": [
+        "Far-sightedness",
+        "Near-sightedness",
+        "Presbyopia",
+        "Astigmatism"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The SI unit of electric current is:",
+      "options": [
+        "Volt",
+        "Ohm",
+        "Ampere",
+        "Watt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How much work is done in moving a charge of 2 C across two points having a potential difference 12 V?",
+      "options": [
+        "6 J",
+        "24 J",
+        "12 J",
+        "48 J"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Resistance of a metallic wire of length l and cross-sectional area A is R. If the length is doubled and area is halved, the new resistance becomes:",
+      "options": [
+        "R/2",
+        "2R",
+        "4R",
+        "R"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "A current of 0.5 A is drawn by a filament of an electric bulb for 10 minutes. The amount of electric charge that flows through the circuit is:",
+      "options": [
+        "300 C",
+        "5 C",
+        "30 C",
+        "600 C"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The equivalent resistance of three resistors 2 Ω, 3 Ω, and 6 Ω connected in parallel is:",
+      "options": [
+        "11 Ω",
+        "1 Ω",
+        "3 Ω",
+        "2 Ω"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following terms does not represent electrical power in a circuit?",
+      "options": [
+        "I²R",
+        "IR²",
+        "VI",
+        "V²/R"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Two resistors of resistances 6 Ω and 3 Ω are connected in series. The equivalent resistance is:",
+      "options": [
+        "2 Ω",
+        "9 Ω",
+        "18 Ω",
+        "3 Ω"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The commercial unit of electrical energy is:",
+      "options": [
+        "Watt",
+        "Kilowatt",
+        "Kilowatt-hour",
+        "Joule"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "An electric iron consumes energy at a rate of 840 W when heating is at the maximum rate and 360 W when the heating is at the minimum. The voltage is 220 V. The current in both cases is approximately:",
+      "options": [
+        "3.8 A and 1.6 A",
+        "1.6 A and 3.8 A",
+        "2.0 A and 1.0 A",
+        "4.0 A and 2.0 A"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If 4 resistors each of value r are connected in parallel, the effective resistance is:",
+      "options": [
+        "4r",
+        "r/4",
+        "r/2",
+        "2r"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Materials which allow electricity to pass through them easily are called:",
+      "options": [
+        "Insulators",
+        "Conductors",
+        "Semiconductors",
+        "Dielectrics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The resistivity of a material depends upon:",
+      "options": [
+        "Length of the conductor",
+        "Area of cross-section",
+        "Nature of the material and temperature",
+        "Shape of the conductor"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "A current-carrying conductor produces:",
+      "options": [
+        "Only electric field",
+        "Only magnetic field",
+        "Both electric and magnetic fields",
+        "Neither electric nor magnetic field"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The magnetic field lines inside a long current-carrying solenoid are:",
+      "options": [
+        "Parallel straight lines",
+        "Circular loops",
+        "Concentric circles",
+        "Intersecting curves"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The direction of magnetic field lines outside a bar magnet is:",
+      "options": [
+        "From South pole to North pole",
+        "From North pole to South pole",
+        "Along the diagonal",
+        "Randomly oriented"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following correctly describes the magnetic field near a long straight wire?",
+      "options": [
+        "The field consists of straight lines parallel to the wire",
+        "The field consists of radial lines originating from the wire",
+        "The field consists of concentric circles centred on the wire",
+        "The field is zero everywhere"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The phenomenon of electromagnetic induction is:",
+      "options": [
+        "The process of charging a body",
+        "The process of generating magnetic field due to current passing through a coil",
+        "Producing induced current in a coil due to relative motion between a magnet and the coil",
+        "The force acting on a current-carrying conductor in a magnetic field"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "An electric generator converts:",
+      "options": [
+        "Mechanical energy into electrical energy",
+        "Electrical energy into mechanical energy",
+        "Chemical energy into electrical energy",
+        "Electrical energy into heat energy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In an electric motor, a split-ring commutator acts as a:",
+      "options": [
+        "Current controller",
+        "Reverser of current (direction changer)",
+        "Voltage booster",
+        "Safety device"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "At the time of short circuit, the current in the circuit:",
+      "options": [
+        "Reduces substantially",
+        "Does not change",
+        "Increases heavily",
+        "Fluctuates continuously"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "A fuse wire is characterized by:",
+      "options": [
+        "High resistance and high melting point",
+        "Low resistance and high melting point",
+        "Low resistance and low melting point",
+        "High resistance and low melting point"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The safe limit of current in domestic wiring for heavy appliances (like AC, geysers) is usually:",
+      "options": [
+        "5 A",
+        "15 A",
+        "30 A",
+        "50 A"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The core of an electromagnet is made of:",
+      "options": [
+        "Soft iron",
+        "Steel",
+        "Copper",
+        "Brass"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Fleming's Left-Hand Rule is used to find:",
+      "options": [
+        "Direction of magnetic field due to current",
+        "Direction of force experienced by a current-carrying conductor in a magnetic field",
+        "Direction of induced current",
+        "Direction of rotation of a coil in a generator"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Fleming's Right-Hand Rule is associated with:",
+      "options": [
+        "Electric motor",
+        "Electric generator (Electromagnetic Induction)",
+        "Heating effect of current",
+        "Magnetic field of a solenoid"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
