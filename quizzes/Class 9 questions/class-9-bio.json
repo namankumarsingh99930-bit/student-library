@@ -1,0 +1,506 @@
+{
+  "title": "Class 9 bio",
+  "subject": "Class 9 questions",
+  "questions": [
+    {
+      "question": "Who discovered cells in cork slices using a primitive microscope?",
+      "options": [
+        "Robert Hooke",
+        "Anton van Leeuwenhoek",
+        "Robert Brown",
+        "Rudolf Virchow"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The powerhouse of the cell is:",
+      "options": [
+        "Ribosome",
+        "Mitochondria",
+        "Golgi apparatus",
+        "Chloroplast"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Plant cell wall is mainly composed of:",
+      "options": [
+        "Protein",
+        "Cellulose",
+        "Lipid",
+        "Starch"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which cell organelle is known as the 'suicide bags' of the cell?",
+      "options": [
+        "Lysosome",
+        "Vacuole",
+        "Centrosome",
+        "Endoplasmic Reticulum"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The functional segments of DNA are called:",
+      "options": [
+        "Chromosomes",
+        "Genes",
+        "Nucleotides",
+        "Ribosomes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Meristematic tissue responsible for increase in girth (lateral growth) of stem is:",
+      "options": [
+        "Apical meristem",
+        "Intercalary meristem",
+        "Lateral meristem (Cambium)",
+        "Permanent tissue"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which plant tissue is responsible for transport of water and minerals?",
+      "options": [
+        "Phloem",
+        "Xylem",
+        "Parenchyma",
+        "Collenchyma"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Blood is a type of:",
+      "options": [
+        "Epithelial tissue",
+        "Muscular tissue",
+        "Connective tissue",
+        "Nervous tissue"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The muscular tissue that is cylindrical, unbranched, and multinucleated is:",
+      "options": [
+        "Smooth muscle",
+        "Cardiac muscle",
+        "Skeletal (Striated) muscle",
+        "Involuntary muscle"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nervous tissue is not found in:",
+      "options": [
+        "Brain",
+        "Spinal cord",
+        "Tendons",
+        "Nerves"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Prokaryotic cells lack:",
+      "options": [
+        "Ribosomes",
+        "Cell membrane",
+        "Well-defined membrane-bound nucleus",
+        "Cytoplasm"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The fluid matrix of blood is called:",
+      "options": [
+        "Plasma",
+        "Serum",
+        "Lymph",
+        "Cytoplasm"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cork cells possess a chemical substance that makes them impervious to gases and water, known as:",
+      "options": [
+        "Lignin",
+        "Cutin",
+        "Suberin",
+        "Pectin"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following organelles has its own DNA and ribosomes?",
+      "options": [
+        "Mitochondria and Plastids",
+        "Golgi apparatus only",
+        "Lysosome",
+        "Endoplasmic reticulum"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Plasmolysis in a plant cell is defined as:",
+      "options": [
+        "Breakdown of cell wall in hypotonic solution",
+        "Shrinkage of cytoplasm away from cell wall in hypertonic solution",
+        "Swelling up of cell in water",
+        "Division of nucleus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Smooth Endoplasmic Reticulum (SER) plays a crucial role in the synthesis of:",
+      "options": [
+        "Proteins",
+        "Lipids and fats",
+        "Nucleic acids",
+        "Enzymes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following is a unicellular organism?",
+      "options": [
+        "Spirogyra",
+        "Amoeba",
+        "Hydra",
+        "Ulothrix"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The term 'Protoplasm' was coined by:",
+      "options": [
+        "Purkinje",
+        "Robert Hooke",
+        "Virchow",
+        "Schwann"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Chromoplasts provide color to:",
+      "options": [
+        "Roots",
+        "Flowers and fruits",
+        "Leaves (green color)",
+        "Underground tubers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Intercalary meristems are located:",
+      "options": [
+        "At the tips of roots and shoots",
+        "At the base of leaves or internodes",
+        "Beneath the bark",
+        "Inside the pith"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Living cells providing mechanical support with thickened corners due to pectin deposition are:",
+      "options": [
+        "Parenchyma",
+        "Collenchyma",
+        "Sclerenchyma",
+        "Aerenchyma"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Sclerenchymatous cells have walls thickened due to deposition of:",
+      "options": [
+        "Cellulose",
+        "Lignin",
+        "Suberin",
+        "Cutin"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Companion cells are associated with:",
+      "options": [
+        "Xylem vessels",
+        "Sieve tubes in Phloem",
+        "Tracheids",
+        "Stomata"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Bone matrix is rich in compounds of:",
+      "options": [
+        "Calcium and phosphorus",
+        "Sodium and potassium",
+        "Iron only",
+        "Magnesium"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Voluntary muscles are also known as:",
+      "options": [
+        "Smooth muscles",
+        "Cardiac muscles",
+        "Skeletal muscles",
+        "Visceral muscles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Cardiac muscles are:",
+      "options": [
+        "Striated and involuntary",
+        "Unstriated and voluntary",
+        "Striated and voluntary",
+        "Unstriated and involuntary"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The structural and functional unit of nervous tissue is:",
+      "options": [
+        "Nephron",
+        "Neuron",
+        "Axon",
+        "Cyton"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Ribosomes are the site of:",
+      "options": [
+        "Protein synthesis",
+        "Lipid synthesis",
+        "Photosynthesis",
+        "Respiration"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Leucoplasts are primarily responsible for:",
+      "options": [
+        "Storing nutrients (starch, oils, proteins)",
+        "Capturing sunlight for photosynthesis",
+        "Giving red color to flowers",
+        "Cell secretion"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which cell organelle is involved in the formation of acrosome in sperm?",
+      "options": [
+        "Mitochondria",
+        "Golgi apparatus",
+        "Centriole",
+        "Ribosome"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Endocytosis is found in organisms like Amoeba to ingest food. It is a function of:",
+      "options": [
+        "Cell wall",
+        "Plasma membrane",
+        "Nucleolus",
+        "Vacuole"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The process by which water moves across a semipermeable membrane is called:",
+      "options": [
+        "Diffusion",
+        "Osmosis",
+        "Active transport",
+        "Transpiration"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When a living cell is placed in a hypertonic solution, it will:",
+      "options": [
+        "Swell up",
+        "Shrink (Plasmolyse)",
+        "Remain unaffected",
+        "Burst"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Cell division that results in the formation of gametes for reproduction is:",
+      "options": [
+        "Mitosis",
+        "Meiosis",
+        "Binary fission",
+        "Budding"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Mitosis is a type of cell division where:",
+      "options": [
+        "Number of chromosomes is halved",
+        "Number of chromosomes remains same (equational division)",
+        "Four daughter cells are produced",
+        "Genetic material does not replicate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nucleolus is rich in:",
+      "options": [
+        "DNA and Protein",
+        "RNA and Protein",
+        "Lipid and Carbohydrate",
+        "Calcium only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which plant tissue contains air cavities to provide buoyancy to aquatic plants?",
+      "options": [
+        "Chlorenchyma",
+        "Aerenchyma",
+        "Parenchyma",
+        "Sclerenchyma"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following animal tissues forms the outer lining of organs and inner lining of blood vessels?",
+      "options": [
+        "Muscular tissue",
+        "Epithelial tissue",
+        "Connective tissue",
+        "Nervous tissue"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Tendons connect:",
+      "options": [
+        "Bone to bone",
+        "Muscle to bone",
+        "Muscle to muscle",
+        "Nerve to muscle"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Ligaments connect:",
+      "options": [
+        "Bone to bone",
+        "Muscle to bone",
+        "Skin to muscle",
+        "Cartilage to skin"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cardiac muscle cells are characterized by the presence of:",
+      "options": [
+        "Striations and intercalated discs",
+        "Spindle shape and no striations",
+        "Multinucleated long fibers",
+        "Absence of mitochondria"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The fluid-filled space inside the vacuole in plant cells contains:",
+      "options": [
+        "Cytoplasm",
+        "Cell sap",
+        "Nucleoplasm",
+        "Blood"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which organelle detoxifies poisons and drugs in liver cells?",
+      "options": [
+        "Smooth Endoplasmic Reticulum",
+        "Rough Endoplasmic Reticulum",
+        "Golgi body",
+        "Lysosome"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The outermost covering of animal cells is:",
+      "options": [
+        "Cell wall",
+        "Plasma membrane",
+        "Capsule",
+        "Cuticle"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Centrosome is found in:",
+      "options": [
+        "Plant cells only",
+        "Animal cells",
+        "Prokaryotic cells only",
+        "Both plant and animal cells equally"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Permanent tissue having dead cells with thick lignified walls is:",
+      "options": [
+        "Parenchyma",
+        "Collenchyma",
+        "Sclerenchyma",
+        "Chlorenchyma"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Granum and Stroma are parts of which organelle?",
+      "options": [
+        "Mitochondria",
+        "Chloroplast",
+        "Nucleus",
+        "Vacuole"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The longest cell in human body is:",
+      "options": [
+        "Muscle cell",
+        "Nerve cell (Neuron)",
+        "Red blood cell",
+        "Bone cell"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Amyloplast is a type of leucoplast that stores:",
+      "options": [
+        "Proteins",
+        "Oils",
+        "Starch (carbohydrates)",
+        "Water"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Unicellular freshwater organisms like Amoeba maintain water balance through:",
+      "options": [
+        "Food vacuoles",
+        "Contractile vacuoles",
+        "Cell wall pressure",
+        "Lysosomes"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
