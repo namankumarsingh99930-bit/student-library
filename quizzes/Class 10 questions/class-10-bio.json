@@ -1,0 +1,506 @@
+{
+  "title": "Class 10 bio",
+  "subject": "Class 10 questions",
+  "questions": [
+    {
+      "question": "When a magnesium ribbon is burnt in air, the ash formed is:",
+      "options": [
+        "Black",
+        "White",
+        "Yellow",
+        "Pink"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chemical formula of lead nitrate is:",
+      "options": [
+        "PbNO3",
+        "Pb(NO3)2",
+        "Pb2NO3",
+        "Pb(NO3)3"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following gas is evolved when an acid reacts with a metal?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The pH of a neutral solution at 25°C is:",
+      "options": [
+        "0",
+        "7",
+        "14",
+        "1"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Baking soda is chemically known as:",
+      "options": [
+        "Sodium carbonate",
+        "Sodium hydrogen carbonate",
+        "Sodium hydroxide",
+        "Sodium chloride"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Washing soda has how many molecules of water of crystallization?",
+      "options": [
+        "2",
+        "5",
+        "10",
+        "7"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following metals is stored under kerosene?",
+      "options": [
+        "Magnesium",
+        "Sodium",
+        "Zinc",
+        "Copper"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The highest electrical conductivity is shown by which metal?",
+      "options": [
+        "Iron",
+        "Silver",
+        "Aluminum",
+        "Copper"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Galvanisation is a method of protecting steel and iron from rusting by coating them with a thin layer of:",
+      "options": [
+        "Copper",
+        "Zinc",
+        "Aluminum",
+        "Chromium"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Stainless steel is an alloy of iron and:",
+      "options": [
+        "Carbon and chromium",
+        "Zinc and copper",
+        "Lead and tin",
+        "Nickel and zinc"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Covalent compounds generally have:",
+      "options": [
+        "High melting and boiling points",
+        "Low melting and boiling points",
+        "High electrical conductivity in solid state",
+        "Ionic bonds"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The functional group present in ethanol is:",
+      "options": [
+        "-OH",
+        "-CHO",
+        "-COOH",
+        ">C=O"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following is the first member of the alkane homologous series?",
+      "options": [
+        "Ethene",
+        "Methane",
+        "Ethyne",
+        "Methanol"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Vinegar is a dilute solution of:",
+      "options": [
+        "Methanoic acid",
+        "Ethanoic acid (Acetic acid)",
+        "Citric acid",
+        "Nitric acid"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Soaps are sodium or potassium salts of long-chain:",
+      "options": [
+        "Alcohols",
+        "Carboxylic acids",
+        "Aldehydes",
+        "Ketones"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Modern periodic table is based on:",
+      "options": [
+        "Atomic mass",
+        "Atomic number",
+        "Density",
+        "Valency"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Elements in the same group of the periodic table have:",
+      "options": [
+        "Same number of valence electrons",
+        "Same number of shells",
+        "Same atomic mass",
+        "Same physical state"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "As we move from left to right across a period in the periodic table, metallic character:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains constant",
+        "First increases then decreases"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The element with electronic configuration 2, 8, 7 belongs to which group?",
+      "options": [
+        "Group 7",
+        "Group 17",
+        "Group 18",
+        "Group 2"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following is a displacement reaction?",
+      "options": [
+        "CaCO3 -> CaO + CO2",
+        "2H2 + O2 -> 2H2O",
+        "Fe + CuSO4 -> FeSO4 + Cu",
+        "NaOH + HCl -> NaCl + H2O"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Precipitation reactions produce an insoluble salt called:",
+      "options": [
+        "Solute",
+        "Precipitate",
+        "Solvent",
+        "Catalyst"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Oxidation involves:",
+      "options": [
+        "Gain of electrons",
+        "Loss of electrons",
+        "Gain of hydrogen",
+        "Loss of oxygen"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Rancidity in food items containing fats and oils can be prevented by adding:",
+      "options": [
+        "Antioxidants",
+        "Moisture",
+        "Oxygen",
+        "Acids"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The chemical formula of Plaster of Paris is:",
+      "options": [
+        "CaSO4.2H2O",
+        "CaSO4.1/2H2O",
+        "CaCO3",
+        "CaOCl2"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Bleaching powder is chemically represented as:",
+      "options": [
+        "CaOCl2",
+        "Ca(OH)2",
+        "CaCO3",
+        "CaCl2"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "An aqueous solution turns red litmus blue. Its excess solution can reverse this change by adding:",
+      "options": [
+        "Baking powder",
+        "Hydrochloric acid",
+        "Sodium hydroxide",
+        "Ammonium hydroxide"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following acids is present in a bee sting?",
+      "options": [
+        "Acetic acid",
+        "Citric acid",
+        "Methanoic acid (Formic acid)",
+        "Oxalic acid"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Non-metal oxides are generally:",
+      "options": [
+        "Basic",
+        "Acidic",
+        "Amphoteric",
+        "Neutral"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following is an amphoteric oxide?",
+      "options": [
+        "Na2O",
+        "CO2",
+        "Al2O3",
+        "SO2"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The process of roasting involves heating of sulphide ores in the presence of excess air to convert them into:",
+      "options": [
+        "Oxides",
+        "Carbonates",
+        "Pure metals",
+        "Sulphates"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The formula of the functional group of a ketone is:",
+      "options": [
+        "-CHO",
+        "-OH",
+        ">C=O",
+        "-COOH"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Buckminsterfullerene is an allotrope of:",
+      "options": [
+        "Phosphorus",
+        "Carbon",
+        "Sulphur",
+        "Tin"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The number of single covalent bonds in a propane molecule (C3H8) is:",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "6"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Oils on treatment with hydrogen in the presence of palladium or nickel catalyst form fats. This is an example of:",
+      "options": [
+        "Addition reaction",
+        "Substitution reaction",
+        "Oxidation reaction",
+        "Elimination reaction"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following compounds can undergo substitution reactions?",
+      "options": [
+        "Methane",
+        "Ethene",
+        "Ethyne",
+        "Benzene (in specific ways, but simplest alkane is methane)"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Ethanol reacts with sodium to form hydrogen gas and:",
+      "options": [
+        "Sodium ethoxide",
+        "Sodium ethanoate",
+        "Sodium hydroxide",
+        "Ethanoic acid"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The IUPAC name of formaldehyde (HCHO) is:",
+      "options": [
+        "Methanol",
+        "Methanal",
+        "Ethanol",
+        "Ethanal"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The hardest natural substance known is:",
+      "options": [
+        "Graphite",
+        "Diamond",
+        "Silicon carbide",
+        "Quartz"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following noble gases has only 2 electrons in its valence shell?",
+      "options": [
+        "Neon",
+        "Helium",
+        "Argon",
+        "Krypton"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The valency of nitrogen in ammonia (NH3) is:",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which metal does not react with dilute HCl?",
+      "options": [
+        "Zinc",
+        "Aluminum",
+        "Copper",
+        "Iron"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "An element 'X' forms a chloride with the formula XCl2, which is a solid with a high melting point. 'X' would most likely be in the same group of the periodic table as:",
+      "options": [
+        "Na",
+        "Mg",
+        "Al",
+        "Si"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The conversion of ethanol to ethanoic acid is an:",
+      "options": [
+        "Reduction reaction",
+        "Oxidation reaction",
+        "Dehydration reaction",
+        "Substitution reaction"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following substances will not give carbon dioxide on treatment with dilute acid?",
+      "options": [
+        "Marble",
+        "Limestone",
+        "Baking soda",
+        "Lime water"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "The correct order of reactivity of metals is:",
+      "options": [
+        "K > Na > Ca > Mg",
+        "Mg > Ca > Na > K",
+        "Ca > K > Na > Mg",
+        "Na > K > Mg > Ca"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "When carbon dioxide is passed through lime water, it turns milky due to the formation of:",
+      "options": [
+        "Calcium carbonate",
+        "Calcium bicarbonate",
+        "Calcium oxide",
+        "Calcium hydroxide"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The chemical formula of quicklime is:",
+      "options": [
+        "CaCO3",
+        "Ca(OH)2",
+        "CaO",
+        "CaSO4"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following statements is correct about an aqueous solution of an acid and a base?",
+      "options": [
+        "(i) Higher the pH, stronger the acid",
+        "(ii) Higher the pH, weaker the acid",
+        "(iii) Lower the pH, stronger the base",
+        "(iv) Lower the pH, weaker the base"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which gas is liberated when sodium carbonate reacts with hydrochloric acid?",
+      "options": [
+        "Hydrogen",
+        "Oxygen",
+        "Carbon dioxide",
+        "Chlorine"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In the refining of copper, the impure copper is made the:",
+      "options": [
+        "Cathode",
+        "Anode",
+        "Electrolyte",
+        "None of the above"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
