@@ -161,3 +161,58 @@ export function colorForSubject(name: string): string {
   for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
   return SPINE_COLORS[Math.abs(hash) % SPINE_COLORS.length];
 }
+
+const QUIZZES_FOLDER = 'quizzes';
+
+export interface QuizEntry {
+  subject: string;
+  title: string;
+  path: string;
+}
+
+export interface QuizIndex {
+  subjects: string[];
+  quizzes: QuizEntry[];
+}
+
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correctIndex: number;
+}
+
+export interface QuizContent {
+  title: string;
+  subject: string;
+  questions: QuizQuestion[];
+}
+
+export async function fetchQuizIndex(): Promise<QuizIndex> {
+  const res = await fetch(
+    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/git/trees/${GITHUB_BRANCH}?recursive=1`
+  );
+  if (!res.ok) {
+    throw new Error(res.status === 404 ? 'Repository or branch not found.' : `GitHub API error (${res.status})`);
+  }
+  const data = await res.json();
+  const tree: any[] = data.tree || [];
+
+  const quizzes: QuizEntry[] = tree
+    .filter((item) => item.type === 'blob' && item.path.startsWith(`${QUIZZES_FOLDER}/`) && item.path.toLowerCase().endsWith('.json'))
+    .map((item) => {
+      const parts = item.path.split('/');
+      const subject = parts[1] || 'Uncategorized';
+      const filename = parts[parts.length - 1];
+      const title = filename.replace(/\.json$/i, '').replace(/-/g, ' ');
+      return { subject, title, path: item.path };
+    });
+
+  const subjects = Array.from(new Set(quizzes.map((q) => q.subject))).sort();
+  return { subjects, quizzes };
+}
+
+export async function fetchQuizContent(path: string): Promise<QuizContent> {
+  const res = await fetch(rawUrl(path));
+  if (!res.ok) throw new Error('Could not load this quiz.');
+  return res.json();
+}
