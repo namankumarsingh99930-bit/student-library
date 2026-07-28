@@ -16,11 +16,14 @@ import {
   Check,
   Download,
   ImagePlus,
+  HelpCircle,
+  Plus,
+  X,
 } from 'lucide-react';
-import { fetchLibrary, humanizeTitle, formatSize, colorForSubject, LibraryData } from './lib/github';
+import { fetchLibrary, humanizeTitle, formatSize, colorForSubject, LibraryData, fetchQuizIndex, QuizIndex } from './lib/github';
 import { getAllSourceFiles, SourceFile } from './data/sourceCode';
 
-type Tab = 'upload' | 'cover' | 'manage' | 'code';
+type Tab = 'upload' | 'cover' | 'quiz' | 'manage' | 'code';
 
 const MAX_RECOMMENDED_SIZE = 4 * 1024 * 1024; // 4MB — Netlify function payload limits apply above this; use manual GitHub upload for bigger files
 
@@ -135,6 +138,7 @@ function AdminDashboard({ password, onLogout }: { password: string; onLogout: ()
         {[
           { id: 'upload' as Tab, label: 'Upload Book', icon: Upload },
           { id: 'cover' as Tab, label: 'Add Cover', icon: ImagePlus },
+          { id: 'quiz' as Tab, label: 'Add Quiz', icon: HelpCircle },
           { id: 'manage' as Tab, label: 'Manage Library', icon: BookOpen },
           { id: 'code' as Tab, label: 'Source Code', icon: Code2 },
         ].map(({ id, label, icon: Icon }) => (
@@ -154,6 +158,7 @@ function AdminDashboard({ password, onLogout }: { password: string; onLogout: ()
       <main className="max-w-4xl mx-auto px-5 sm:px-8 pb-24">
         {tab === 'upload' && <UploadTab password={password} />}
         {tab === 'cover' && <CoverTab password={password} />}
+        {tab === 'quiz' && <QuizTab password={password} />}
         {tab === 'manage' && <ManageTab password={password} />}
         {tab === 'code' && <CodeTab />}
       </main>
@@ -446,6 +451,314 @@ function CoverTab({ password }: { password: string }) {
       >
         {status === 'uploading' ? <Loader2 className="w-4 h-4 animate-spin" /> : <ImagePlus className="w-4 h-4" />}
         <span>{status === 'uploading' ? 'Uploading…' : 'Add Cover'}</span>
+      </button>
+
+      {status === 'success' && (
+        <p className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-lg px-3 py-2.5 flex items-start gap-1.5">
+          <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+          <span>{message}</span>
+        </p>
+      )}
+      {status === 'error' && (
+        <p className="text-xs text-red-600 bg-red-50 border border-red-100 rounded-lg px-3 py-2.5 flex items-start gap-1.5">
+          <AlertCircle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+          <span>{message}</span>
+        </p>
+      )}
+    </div>
+  );
+}
+
+interface QuizQuestionDraft {
+  question: string;
+  options: [string, string, string, string];
+  correctIndex: number;
+}
+
+function emptyQuestion(): QuizQuestionDraft {
+  return { question: '', options: ['', '', '', ''], correctIndex: 0 };
+}
+
+function QuizTab({ password }: { password: string }) {
+  const [library, setLibrary] = useState<LibraryData | null>(null);
+  const [subjectMode, setSubjectMode] = useState<'existing' | 'new'>('existing');
+  const [selectedSubject, setSelectedSubject] = useState('');
+  const [newSubject, setNewSubject] = useState('');
+  const [quizTitle, setQuizTitle] = useState('');
+  const [questions, setQuestions] = useState<QuizQuestionDraft[]>([emptyQuestion()]);
+  const [status, setStatus] = useState<'idle' | 'saving' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+  const [entryMode, setEntryMode] = useState<'oneByOne' | 'bulk'>('oneByOne');
+  const [bulkText, setBulkText] = useState('');
+  const [bulkError, setBulkError] = useState('');
+
+  useEffect(() => {
+    fetchLibrary().then(setLibrary).catch(() => {});
+  }, []);
+
+  const subject = subjectMode === 'existing' ? selectedSubject : newSubject.trim();
+
+  const parseBulkText = (text: string): QuizQuestionDraft[] => {
+    const blocks = text
+      .split(/\n\s*\n/)
+      .map((b) => b.trim())
+      .filter(Boolean);
+
+    const parsed: QuizQuestionDraft[] = [];
+    for (const block of blocks) {
+      const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
+      if (lines.length < 5) continue;
+
+      const qLine = lines[0].replace(/^Q[:.)]\s*/i, '').trim();
+      const optionLines = lines.slice(1, 5);
+      const options: string[] = [];
+      let correctIndex = 0;
+
+      optionLines.forEach((line, i) => {
+        let text = line.replace(/^[A-D][:.)]\s*/i, '').trim();
+        if (text.endsWith('*')) {
+          correctIndex = i;
+          text = text.slice(0, -1).trim();
+        }
+        options.push(text);
+      });
+
+      if (qLine && options.length === 4 && options.every((o) => o)) {
+        parsed.push({ question: qLine, options: options as [string, string, string, string], correctIndex });
+      }
+    }
+    return parsed;
+  };
+
+  const handleLoadBulk = () => {
+    setBulkError('');
+    const parsed = parseBulkText(bulkText);
+    if (parsed.length === 0) {
+      setBulkError('Could not find any valid questions. Check the format and try again.');
+      return;
+    }
+    setQuestions(parsed);
+    setEntryMode('oneByOne');
+  };
+
+  const updateQuestion = (idx: number, patch: Partial<QuizQuestionDraft>) => {
+    setQuestions((qs) => qs.map((q, i) => (i === idx ? { ...q, ...patch } : q)));
+  };
+
+  const updateOption = (qIdx: number, oIdx: number, value: string) => {
+    setQuestions((qs) =>
+      qs.map((q, i) => {
+        if (i !== qIdx) return q;
+        const options = [...q.options] as [string, string, string, string];
+        options[oIdx] = value;
+        return { ...q, options };
+      })
+    );
+  };
+
+  const addQuestion = () => setQuestions((qs) => [...qs, emptyQuestion()]);
+  const removeQuestion = (idx: number) => setQuestions((qs) => qs.filter((_, i) => i !== idx));
+
+  const isValid =
+    subject &&
+    quizTitle.trim() &&
+    questions.length > 0 &&
+    questions.every((q) => q.question.trim() && q.options.every((o) => o.trim()));
+
+  const handlePublish = async () => {
+    if (!isValid) return;
+    setStatus('saving');
+    setMessage('');
+    try {
+      const res = await fetch('/api/admin/upload-quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          password,
+          subject,
+          quizTitle: quizTitle.trim(),
+          questions,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok || data.error) {
+        setStatus('error');
+        setMessage(data.error || 'Could not publish quiz.');
+        return;
+      }
+      setStatus('success');
+      setMessage(`Quiz "${quizTitle}" published to ${subject}.`);
+      setQuizTitle('');
+      setQuestions([emptyQuestion()]);
+    } catch (err: any) {
+      setStatus('error');
+      setMessage(err.message || 'Could not publish quiz.');
+    }
+  };
+
+  return (
+    <div className="max-w-lg space-y-5">
+      <div>
+        <label className="text-xs font-semibold text-muted uppercase tracking-wide">Subject</label>
+        <div className="flex gap-2 mt-2 mb-2">
+          <button
+            onClick={() => setSubjectMode('existing')}
+            className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-colors ${
+              subjectMode === 'existing' ? 'bg-shelf text-white' : 'bg-stone-50 text-muted'
+            }`}
+          >
+            Existing folder
+          </button>
+          <button
+            onClick={() => setSubjectMode('new')}
+            className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-colors ${
+              subjectMode === 'new' ? 'bg-shelf text-white' : 'bg-stone-50 text-muted'
+            }`}
+          >
+            + New folder
+          </button>
+        </div>
+        {subjectMode === 'existing' ? (
+          <select
+            value={selectedSubject}
+            onChange={(e) => setSelectedSubject(e.target.value)}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-line text-sm focus:outline-none focus:border-shelf"
+          >
+            <option value="">Select a subject…</option>
+            {library?.subjects.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        ) : (
+          <input
+            type="text"
+            value={newSubject}
+            onChange={(e) => setNewSubject(e.target.value)}
+            placeholder="e.g. Mathematics"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-line text-sm focus:outline-none focus:border-shelf"
+          />
+        )}
+      </div>
+
+      <div>
+        <label className="text-xs font-semibold text-muted uppercase tracking-wide">Quiz title</label>
+        <input
+          type="text"
+          value={quizTitle}
+          onChange={(e) => setQuizTitle(e.target.value)}
+          placeholder="e.g. Algebra Basics"
+          className="mt-2 w-full px-3.5 py-2.5 rounded-xl border border-line text-sm focus:outline-none focus:border-shelf"
+        />
+      </div>
+
+      <div className="flex gap-2">
+        <button
+          onClick={() => setEntryMode('oneByOne')}
+          className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-colors ${
+            entryMode === 'oneByOne' ? 'bg-shelf text-white' : 'bg-stone-50 text-muted'
+          }`}
+        >
+          One by one
+        </button>
+        <button
+          onClick={() => setEntryMode('bulk')}
+          className={`flex-1 py-2 rounded-lg text-xs font-semibold transition-colors ${
+            entryMode === 'bulk' ? 'bg-shelf text-white' : 'bg-stone-50 text-muted'
+          }`}
+        >
+          Bulk paste
+        </button>
+      </div>
+
+      {entryMode === 'bulk' && (
+        <div className="space-y-2.5">
+          <p className="text-xs text-muted leading-relaxed bg-stone-50 border border-line rounded-lg px-3 py-2.5">
+            Paste questions in this format — put a <strong>*</strong> right after the correct option, and leave one
+            blank line between questions:
+            <br />
+            <span className="font-mono text-[11px] block mt-1.5 whitespace-pre-line">
+              {'Q: Question text?\nA) Option 1\nB) Option 2 *\nC) Option 3\nD) Option 4'}
+            </span>
+          </p>
+          <textarea
+            value={bulkText}
+            onChange={(e) => setBulkText(e.target.value)}
+            rows={10}
+            placeholder={'Q: Question text?\nA) Option 1\nB) Option 2 *\nC) Option 3\nD) Option 4\n\nQ: Next question?\nA) ...\nB) ...\nC) ...\nD) ...'}
+            className="w-full px-3.5 py-2.5 rounded-xl border border-line text-xs font-mono focus:outline-none focus:border-shelf resize-none"
+          />
+          {bulkError && <p className="text-xs text-red-600">{bulkError}</p>}
+          <button
+            onClick={handleLoadBulk}
+            disabled={!bulkText.trim()}
+            className="w-full py-2.5 rounded-xl bg-shelf hover:bg-shelf/90 disabled:opacity-40 text-white font-semibold text-xs transition-colors"
+          >
+            Load Questions
+          </button>
+        </div>
+      )}
+
+      {entryMode === 'oneByOne' && (
+      <div className="space-y-4">
+        <label className="text-xs font-semibold text-muted uppercase tracking-wide">Questions</label>
+        {questions.map((q, qIdx) => (
+          <div key={qIdx} className="border border-line rounded-xl p-4 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-muted">Question {qIdx + 1}</span>
+              {questions.length > 1 && (
+                <button onClick={() => removeQuestion(qIdx)} className="text-red-500 hover:text-red-700">
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+            <input
+              type="text"
+              value={q.question}
+              onChange={(e) => updateQuestion(qIdx, { question: e.target.value })}
+              placeholder="Question text"
+              className="w-full px-3 py-2 rounded-lg border border-line text-sm focus:outline-none focus:border-shelf"
+            />
+            {q.options.map((opt, oIdx) => (
+              <div key={oIdx} className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name={`correct-${qIdx}`}
+                  checked={q.correctIndex === oIdx}
+                  onChange={() => updateQuestion(qIdx, { correctIndex: oIdx })}
+                  className="shrink-0"
+                />
+                <input
+                  type="text"
+                  value={opt}
+                  onChange={(e) => updateOption(qIdx, oIdx, e.target.value)}
+                  placeholder={`Option ${oIdx + 1}`}
+                  className="flex-1 px-3 py-1.5 rounded-lg border border-line text-xs focus:outline-none focus:border-shelf"
+                />
+              </div>
+            ))}
+            <p className="text-[10px] text-muted">Select the radio button next to the correct option.</p>
+          </div>
+        ))}
+
+        <button
+          onClick={addQuestion}
+          className="w-full py-2.5 rounded-xl border border-dashed border-line text-muted hover:border-shelf hover:text-shelf transition-colors text-xs font-semibold flex items-center justify-center gap-1.5"
+        >
+          <Plus className="w-3.5 h-3.5" />
+          Add Question
+        </button>
+      </div>
+      )}
+
+      <button
+        onClick={handlePublish}
+        disabled={!isValid || status === 'saving'}
+        className="w-full py-3 rounded-xl bg-shelf hover:bg-shelf/90 disabled:opacity-40 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors"
+      >
+        {status === 'saving' ? <Loader2 className="w-4 h-4 animate-spin" /> : <HelpCircle className="w-4 h-4" />}
+        <span>{status === 'saving' ? 'Publishing…' : 'Publish Quiz'}</span>
       </button>
 
       {status === 'success' && (

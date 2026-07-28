@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info, Share2, BookMarked, Sparkles } from 'lucide-react';
+import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info, Share2, BookMarked, Sparkles, HelpCircle } from 'lucide-react';
 import {
   fetchLibrary,
   fetchRecentBookPaths,
+  fetchQuizIndex,
   rawUrl,
   humanizeTitle,
   formatSize,
@@ -10,16 +11,22 @@ import {
   slugify,
   LibraryData,
   BookEntry,
+  QuizEntry,
+  QuizIndex,
 } from './lib/github';
 import SideAdBanner from './components/SideAdBanner';
 import RequestBookModal from './components/RequestBookModal';
+import QuizPlayer from './components/QuizPlayer';
 
-const POPUNDER_URL = 'https://affectionatestorage.com/bb3EVJ0hP.3jpmvqbYmXVDJ_ZeDv0/3fMmjtUL4_NljpYN1WL/TAcsyFNYTBgt2lNxjXkX';
+import { openPopunder } from './lib/ads';
 
 type Route =
   | { view: 'home' }
   | { view: 'subject'; subject: string }
-  | { view: 'book'; subject: string; bookSlug: string };
+  | { view: 'book'; subject: string; bookSlug: string }
+  | { view: 'quizzes' }
+  | { view: 'quizSubject'; subject: string }
+  | { view: 'quiz'; path: string };
 
 function parsePathToRoute(pathname: string): Route {
   const parts = pathname.split('/').filter(Boolean);
@@ -27,6 +34,13 @@ function parsePathToRoute(pathname: string): Route {
     const subject = decodeURIComponent(parts[1]);
     if (parts[2]) return { view: 'book', subject, bookSlug: decodeURIComponent(parts[2]) };
     return { view: 'subject', subject };
+  }
+  if (parts[0] === 'quiz') {
+    if (parts[1] && parts[2]) {
+      return { view: 'quiz', path: `quizzes/${decodeURIComponent(parts[1])}/${decodeURIComponent(parts[2])}.json` };
+    }
+    if (parts[1]) return { view: 'quizSubject', subject: decodeURIComponent(parts[1]) };
+    return { view: 'quizzes' };
   }
   return { view: 'home' };
 }
@@ -37,6 +51,15 @@ function subjectPath(subject: string): string {
 
 function bookPath(subject: string, book: BookEntry): string {
   return `/subject/${encodeURIComponent(subject)}/${encodeURIComponent(slugify(humanizeTitle(book.name)))}`;
+}
+
+function quizSubjectPath(subject: string): string {
+  return `/quiz/${encodeURIComponent(subject)}`;
+}
+
+function quizPlayPath(quiz: QuizEntry): string {
+  const parts = quiz.path.replace(/\.json$/i, '').split('/');
+  return `/quiz/${encodeURIComponent(parts[1])}/${encodeURIComponent(parts[2])}`;
 }
 
 function setMetaDescription(content: string) {
@@ -65,11 +88,7 @@ async function handleShare(bookTitle: string) {
 }
 
 async function handleDownload(fileUrl: string, filename: string) {
-  try {
-    window.open(POPUNDER_URL, '_blank');
-  } catch {
-    // ignore — ad blockers may prevent this
-  }
+  openPopunder();
 
   try {
     const proxyUrl = `/api/download-proxy?url=${encodeURIComponent(fileUrl)}&filename=${encodeURIComponent(filename)}`;
@@ -106,6 +125,9 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [recentBooks, setRecentBooks] = useState<BookEntry[]>([]);
   const [showRequestModal, setShowRequestModal] = useState(false);
+  const [quizIndex, setQuizIndex] = useState<QuizIndex | null>(null);
+  const [quizIndexLoading, setQuizIndexLoading] = useState(false);
+  const [quizIndexError, setQuizIndexError] = useState('');
 
   useEffect(() => {
     fetchLibrary()
@@ -123,6 +145,16 @@ export default function App() {
       setRecentBooks(matched);
     });
   }, [library]);
+
+  useEffect(() => {
+    const needsQuizIndex = route.view === 'quizzes' || route.view === 'quizSubject';
+    if (!needsQuizIndex || quizIndex) return;
+    setQuizIndexLoading(true);
+    fetchQuizIndex()
+      .then(setQuizIndex)
+      .catch((err) => setQuizIndexError(err.message || 'Could not load quizzes.'))
+      .finally(() => setQuizIndexLoading(false));
+  }, [route, quizIndex]);
 
   useEffect(() => {
     const onPopState = () => setRoute(parsePathToRoute(window.location.pathname));
@@ -196,9 +228,20 @@ export default function App() {
             <div className="text-[11px] text-muted mt-0.5">book PDF library</div>
           </div>
         </a>
+        <a
+          href="/quiz"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/quiz');
+          }}
+          className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-index bg-index-soft px-3 py-1.5 rounded-full hover:bg-index hover:text-white transition-colors shrink-0"
+        >
+          <HelpCircle className="w-3.5 h-3.5" />
+          <span>Quizzes</span>
+        </a>
         <button
           onClick={() => setShowRequestModal(true)}
-          className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-shelf bg-shelf-soft px-3 py-1.5 rounded-full hover:bg-shelf hover:text-white transition-colors shrink-0"
+          className="flex items-center gap-1.5 text-xs font-semibold text-shelf bg-shelf-soft px-3 py-1.5 rounded-full hover:bg-shelf hover:text-white transition-colors shrink-0"
         >
           <BookMarked className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">Request a Book</span>
@@ -459,6 +502,103 @@ export default function App() {
                 </div>
               )}
             </>
+          )}
+
+          {route.view === 'quizzes' && (
+            <>
+              <h1 className="font-display font-semibold text-2xl sm:text-3xl mb-1">Quizzes</h1>
+              <p className="text-muted text-sm mb-8">Pick a subject and test yourself.</p>
+
+              {quizIndexLoading && (
+                <div className="flex items-center gap-2 text-muted text-sm py-10">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Loading quizzes…
+                </div>
+              )}
+              {quizIndexError && !quizIndexLoading && (
+                <div className="flex items-start gap-2 text-sm text-red-600 bg-red-50 border border-red-100 rounded-lg px-4 py-3 max-w-md">
+                  <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+                  <span>{quizIndexError}</span>
+                </div>
+              )}
+              {quizIndex && quizIndex.subjects.length === 0 && (
+                <p className="text-muted text-sm">No quizzes yet — check back soon.</p>
+              )}
+
+              <div className="flex flex-wrap gap-3">
+                {quizIndex?.subjects.map((subject) => {
+                  const color = colorForSubject(subject);
+                  const count = quizIndex.quizzes.filter((q) => q.subject === subject).length;
+                  return (
+                    <a
+                      key={subject}
+                      href={quizSubjectPath(subject)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigate(quizSubjectPath(subject));
+                      }}
+                      className="group relative flex items-stretch overflow-hidden rounded-lg border border-line hover:border-transparent shadow-sm hover:shadow-md transition-all"
+                      style={{ minWidth: '9.5rem' }}
+                    >
+                      <span className="w-2.5 shrink-0" style={{ backgroundColor: color }} />
+                      <span className="flex-1 px-4 py-3.5 text-left bg-white group-hover:bg-stone-50 transition-colors">
+                        <span className="block font-display font-semibold text-sm leading-tight">{subject}</span>
+                        <span className="block text-[11px] text-muted mt-1 font-mono">{count} quizzes</span>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </>
+          )}
+
+          {route.view === 'quizSubject' && (
+            <>
+              <a
+                href="/quiz"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate('/quiz');
+                }}
+                className="flex items-center gap-1 text-sm text-muted hover:text-ink mb-5 transition-colors w-fit"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                All quiz subjects
+              </a>
+              <h1 className="font-display font-semibold text-2xl sm:text-3xl mb-6">{route.subject}</h1>
+
+              {quizIndexLoading && (
+                <div className="flex items-center gap-2 text-muted text-sm py-10">
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Loading quizzes…
+                </div>
+              )}
+
+              <div className="space-y-2.5">
+                {quizIndex?.quizzes
+                  .filter((q) => q.subject === route.subject)
+                  .map((quiz) => (
+                    <a
+                      key={quiz.path}
+                      href={quizPlayPath(quiz)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigate(quizPlayPath(quiz));
+                      }}
+                      className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-line hover:border-index/40 transition-colors"
+                    >
+                      <div className="w-9 h-9 rounded-lg bg-index-soft flex items-center justify-center shrink-0">
+                        <HelpCircle className="w-4 h-4 text-index" />
+                      </div>
+                      <span className="text-sm font-semibold capitalize">{quiz.title}</span>
+                    </a>
+                  ))}
+              </div>
+            </>
+          )}
+
+          {route.view === 'quiz' && (
+            <QuizPlayer path={route.path} onExit={() => navigate('/quiz')} />
           )}
         </main>
 
