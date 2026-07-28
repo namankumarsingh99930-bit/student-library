@@ -1,0 +1,506 @@
+{
+  "title": "Class 10 political",
+  "subject": "Class 10 questions",
+  "questions": [
+    {
+      "question": "Power sharing is desirable because it:",
+      "options": [
+        "Increases conflict between communities",
+        "Reduces the possibility of conflict between social groups",
+        "Delays decision-making permanently",
+        "Concentrates power in one hand"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Belgium solved its ethnic problem by modifying its constitution four times between 1970 and:",
+      "options": [
+        "1980",
+        "1993",
+        "2000",
+        "2005"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In Sri Lanka, majoritarianism was established by recognizing which language as the only official language in 1956?",
+      "options": [
+        "Tamil",
+        "Sinhala",
+        "English",
+        "Hindi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tier of government was added to Indian federalism through constitutional amendments in 1992?",
+      "options": [
+        "Central Government",
+        "State Government",
+        "Local Government (Panchayati Raj / Municipalities)",
+        "International Relations wing"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The subject 'Banking' and 'Currency' falls under which list of the Indian Constitution?",
+      "options": [
+        "Union List",
+        "State List",
+        "Concurrent List",
+        "Residuary subjects"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If there is a conflict between the central law and state law on a subject mentioned in the Concurrent List, whose law prevails?",
+      "options": [
+        "State Law",
+        "Central Law",
+        "Supreme Court decides on case basis",
+        "Both laws become null and void"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which language is recognized as the national language by the Constitution of India?",
+      "options": [
+        "Hindi",
+        "English",
+        "No language is given the status of national language by the Constitution",
+        "Sanskrit"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The system where seats are reserved for women in local bodies in India is:",
+      "options": [
+        "One-third (33%) seats",
+        "50% exactly in all states uniformly",
+        "10% seats",
+        "No reservation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Feminist movements aimed at achieving which of the following for women?",
+      "options": [
+        "Political and legal equality, and equal opportunities in personal and public life",
+        "Superior status over men",
+        "Exemption from taxation",
+        "Ban on workforce participation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Communal politics is based on the idea that:",
+      "options": [
+        "Religion is the principal basis of a social community",
+        "All religions are equal",
+        "State should have no relation with religion",
+        "Economic class is more important than faith"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which institution in India has the power to interpret the Constitution and settle disputes between states?",
+      "options": [
+        "Parliament",
+        "Supreme Court",
+        "Prime Minister Office",
+        "Election Commission"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A belief that caste is the sole basis of social community leads to:",
+      "options": [
+        "Secularism",
+        "Casteism",
+        "Socialism",
+        "Regionalism"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Political parties are allotted symbols by:",
+      "options": [
+        "The President of India",
+        "The Election Commission of India",
+        "The Prime Minister",
+        "The Lok Sabha Speaker"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is a 'partisan' in political terminology?",
+      "options": [
+        "A neutral mediator",
+        "A committed member of a group, party, or faction",
+        "An independent candidate",
+        "A foreign observer"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which country has a two-party system as a norm?",
+      "options": [
+        "India",
+        "United States of America",
+        "China",
+        "Pakistan"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "An alliance formed when several parties join hands for contesting elections is known as:",
+      "options": [
+        "Coalition",
+        "Front / Alliance (e.g., NDA or UPA)",
+        "Pressure group",
+        "Merger"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Democracy is better than other forms of government because:",
+      "options": [
+        "It guarantees economic growth without inflation",
+        "It enhances the dignity of citizens and provides room to correct mistakes",
+        "It ensures absolute equality of wealth",
+        "Decisions are made instantly without debate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Transparency in a democratic government means:",
+      "options": [
+        "Citizens can check whether decisions were taken through correct norms and procedures",
+        "Government accounts are completely secret",
+        "Ministers are exempt from public questioning",
+        "Bureaucrats rule without oversight"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Accountability is a key feature of:",
+      "options": [
+        "Dictatorship",
+        "Military rule",
+        "Democratic government",
+        "Monarchy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The linguistic states reorganization in India was first carried out in:",
+      "options": [
+        "1947",
+        "1956",
+        "1965",
+        "1971"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following countries is an example of 'coming together' federation?",
+      "options": [
+        "India",
+        "USA",
+        "Belgium",
+        "Spain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Residuary powers in the Indian Constitution are vested with:",
+      "options": [
+        "State Governments",
+        "Union Government / Parliament",
+        "Supreme Court",
+        "Local Bodies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The system of local self-government in rural areas is known as:",
+      "options": [
+        "Municipal Corporation",
+        "Panchayati Raj",
+        "District Board",
+        "Cantonment Board"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In the context of electoral politics, what does 'Code of Conduct' mean?",
+      "options": [
+        "Guidelines for election campaign issued by Election Commission",
+        "Criminal code for politicians",
+        "Tax rules for candidates",
+        "Minimum educational qualification for voters"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The proportion of women in the Indian Lok Sabha has historically been:",
+      "options": [
+        "Very high (above 50%)",
+        "Very low (generally below 15%)",
+        "Equal to men",
+        "Fixed at 75%"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following leaders fought against caste inequalities in India?",
+      "options": [
+        "Jyotirao Phule, Periyar, and Dr. B.R. Ambedkar",
+        "Only colonial administrators",
+        "Industrial magnates",
+        "Foreign missionaries"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Secular state means:",
+      "options": [
+        "State has an official state religion",
+        "State treats all religions with equal respect and has no official religion",
+        "State bans all religious practices",
+        "State promotes only major religion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The official recognition of one religion as the state religion happened in:",
+      "options": [
+        "India",
+        "Pakistan / Sri Lanka",
+        "USA",
+        "Canada"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the minimum number of members required to register a political party with the Election Commission?",
+      "options": [
+        "100 members",
+        "A detailed list of members with specific vote share criteria / state recognition rules",
+        "10 members",
+        "5 members"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Parties that secure at least 6% of total votes in Lok Sabha or Assembly elections in four states and win 4 seats are recognized as:",
+      "options": [
+        "State parties",
+        "National parties",
+        "Independent groups",
+        "Local factions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The most popular form of government across the contemporary world is:",
+      "options": [
+        "Monarchy",
+        "Democracy",
+        "Military dictatorship",
+        "Oligarchy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Dictatorships often boast of higher economic growth rates, but long-term data shows:",
+      "options": [
+        "Dictatorships always perform better",
+        "Little difference in average economic growth rates between democracies and dictatorships",
+        "Democracies always face economic collapse",
+        "Growth is unrelated to government type"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The assertion that \"democracy is based on political equality\" implies:",
+      "options": [
+        "Every citizen has one vote and each vote has one equal value",
+        "Wealth is distributed equally among all",
+        "All citizens hold public office by rotation",
+        "No laws are required in a democracy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Power sharing in modern democracies can take forms such as:",
+      "options": [
+        "Among different organs of government (horizontal distribution)",
+        "Among governments at different levels (vertical distribution)",
+        "Among social groups and political parties/coalitions",
+        "All of the above"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Community Government in Belgium is elected by people belonging to:",
+      "options": [
+        "One single linguistic community (Dutch, French, and German-speaking)",
+        "All citizens living in a specific municipal ward",
+        "Business owners only",
+        "Religious clergy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which structural body in India resolves disputes regarding water sharing between states?",
+      "options": [
+        "Supreme Court / Special Tribunals set up by Parliament",
+        "State Governor",
+        "NITI Aayog",
+        "Finance Commission"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Decentralization in India was made more effective and mandatory through constitutional amendments in:",
+      "options": [
+        "1992",
+        "1980",
+        "2001",
+        "1985"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The term 'Secularism' in the Indian Preamble implies that:",
+      "options": [
+        "Citizens have complete freedom to follow and practice any religion",
+        "Government favors one major religion",
+        "Religion is banned from public life",
+        "Only minority religions are protected"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Occupational mobility refers to:",
+      "options": [
+        "Shift from rural to urban areas",
+        "Shift from one occupation to another, usually creating a shift across generations",
+        "Change of citizenship",
+        "Promotion within the same job"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The percentage of seats reserved for Scheduled Castes (SCs) and Scheduled Tribes (STs) in the Lok Sabha is proportional to:",
+      "options": [
+        "Their share in total population",
+        "Tax paid by them",
+        "Party preference",
+        "Random allocation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A system of 'checks and balances' is another name for:",
+      "options": [
+        "Horizontal distribution of power",
+        "Vertical division of power",
+        "Coalition government",
+        "Unitary government"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which level of government has the power to legislate on 'residuary subjects' like cyber laws?",
+      "options": [
+        "State government",
+        "Union Parliament",
+        "Local panchayats",
+        "Joint committees"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which constitutional body conducts panchayat and municipal elections in states?",
+      "options": [
+        "Election Commission of India",
+        "State Election Commission",
+        "High Court",
+        "Governor's Secretariat"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The biggest challenge to political parties in India includes:",
+      "options": [
+        "Lack of internal democracy",
+        "Dynastic succession",
+        "Role of money and muscle power",
+        "All of the above"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Social divisions based on overlapping differences tend to lead to:",
+      "options": [
+        "Deep social divisions and social conflicts",
+        "Harmonious integration",
+        "Elimination of cultural differences",
+        "Economic uniformity"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Cross-cutting social differences are easier to accommodate because:",
+      "options": [
+        "They form overlapping fault lines",
+        "Groups can share common interests on some issues while differing on others",
+        "They erase all cultural identities",
+        "Government suppresses them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The term 'Patriarchal society' means a society that is:",
+      "options": [
+        "Ruled and dominated by women",
+        "Ruled and dominated by men, giving them more power than women",
+        "Equal for both genders",
+        "Child-centric"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "To prevent the dominance of one party or ideology, democracies rely on:",
+      "options": [
+        "Multi-party system and regular competitive elections",
+        "One-party dictatorship",
+        "Suspension of voting rights",
+        "Military oversight"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which country experienced ethnic conflict between Sinhala and Tamil communities?",
+      "options": [
+        "Belgium",
+        "Sri Lanka",
+        "Yugoslavia",
+        "Cyprus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What core value does democracy promote regarding social diversity?",
+      "options": [
+        "Accommodation of diversity and peaceful coexistence",
+        "Forced assimilation of minority cultures",
+        "Complete eradication of differences",
+        "Segregation of communities"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
