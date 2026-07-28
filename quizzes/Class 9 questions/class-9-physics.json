@@ -1,0 +1,506 @@
+{
+  "title": "Class 9 physics",
+  "subject": "Class 9 questions",
+  "questions": [
+    {
+      "question": "SI unit of acceleration is:",
+      "options": [
+        "m/s",
+        "m/s²",
+        "km/h",
+        "m²s"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Slope of a distance-time graph for a uniform motion represents:",
+      "options": [
+        "Speed",
+        "Acceleration",
+        "Distance covered",
+        "Displacement"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Inertia is the property of a body by virtue of which it tends to resist:",
+      "options": [
+        "Change in its state of rest or uniform motion",
+        "Change in direction only",
+        "Gravitational pull",
+        "Heat radiation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Newton's first law of motion defines:",
+      "options": [
+        "Force",
+        "Inertia and Force * (Inertia concept/qualitative definition of force)",
+        "Momentum",
+        "Rate of change of momentum"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "When a bus suddenly starts moving forward, the passengers sitting inside tend to fall backward due to:",
+      "options": [
+        "Inertia of motion",
+        "Inertia of rest",
+        "Friction with seats",
+        "Centrifugal force"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The momentum of an object of mass m moving with velocity v is:",
+      "options": [
+        "mv²",
+        "½ mv²",
+        "mv",
+        "m/v"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to the universal law of gravitation, the force of attraction between two bodies is inversely proportional to:",
+      "options": [
+        "Product of their masses",
+        "Square of the distance between them",
+        "Distance between them",
+        "Sum of their masses"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The value of acceleration due to gravity (g) on the surface of the Earth is approximately:",
+      "options": [
+        "9.8 m/s²",
+        "9.8 km/s²",
+        "6.67 × 10^-11 N m²/kg²",
+        "Zero"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Work done on an object depends upon:",
+      "options": [
+        "Force applied",
+        "Displacement in the direction of force",
+        "Both A and B",
+        "Time taken to do the work"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "SI unit of work and energy is:",
+      "options": [
+        "Watt",
+        "Joule",
+        "Newton",
+        "Pascal"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Kinetic energy of an object of mass m moving with velocity v is given by:",
+      "options": [
+        "mv",
+        "mgh",
+        "½ mv²",
+        "mv²"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Sound waves in air are:",
+      "options": [
+        "Transverse waves",
+        "Longitudinal waves",
+        "Electromagnetic waves",
+        "Stationary waves"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The unit of frequency is:",
+      "options": [
+        "Second",
+        "Meter",
+        "Hertz",
+        "Decibel"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Echo is produced due to:",
+      "options": [
+        "Refraction of sound",
+        "Reflection of sound",
+        "Interference of sound",
+        "Absorption of sound"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Human ear can normally hear sounds frequencies ranging between:",
+      "options": [
+        "20 Hz to 20,000 Hz",
+        "0 Hz to 20 Hz",
+        "Above 20,000 Hz",
+        "100 Hz to 1,000 Hz"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A body is thrown vertically upwards. At its highest point, its velocity is zero and its acceleration is:",
+      "options": [
+        "Zero",
+        "Downward towards earth (g)",
+        "Maximum upward",
+        "Equal to initial velocity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Area under speed-time graph represents:",
+      "options": [
+        "Distance travelled",
+        "Acceleration",
+        "Velocity",
+        "Force"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A cricket ball of mass 150 g is moving with a velocity of 20 m/s. The momentum of the ball is:",
+      "options": [
+        "3 kg m/s",
+        "30 kg m/s",
+        "300 kg m/s",
+        "0.3 kg m/s"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "When a fixed force acts on a body, the acceleration produced is inversely proportional to:",
+      "options": [
+        "Mass of the body",
+        "Force applied",
+        "Velocity of the body",
+        "Time taken"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "20: The weight of an object on the Moon is about what fraction of its weight on the Earth?",
+      "options": [
+        "1/2",
+        "1/6",
+        "1/4",
+        "Equal"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Potential energy of an object raised to a height h above the ground is:",
+      "options": [
+        "½ mv²",
+        "mgh",
+        "m v g",
+        "mg/h"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The power of an agent is defined as:",
+      "options": [
+        "Work done per unit time",
+        "Energy consumed per unit distance",
+        "Force applied per unit area",
+        "Momentum change per second"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Bats can fly in dark by emitting and detecting reflections of:",
+      "options": [
+        "Infrasound",
+        "Ultrasound",
+        "Audible sound waves",
+        "Radio waves"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The loudness of sound depends upon its:",
+      "options": [
+        "Frequency",
+        "Amplitude",
+        "Wavelength",
+        "Speed"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following physical quantities is a scalar quantity?",
+      "options": [
+        "Velocity",
+        "Force",
+        "Displacement",
+        "Speed"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "A particle is moving in a circular path of radius r. The displacement after half a circle is:",
+      "options": [
+        "πr",
+        "2r",
+        "2πr",
+        "Zero"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The rate of change of velocity is called:",
+      "options": [
+        "Speed",
+        "Acceleration",
+        "Momentum",
+        "Distance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Action and reaction forces act on:",
+      "options": [
+        "The same body",
+        "Different bodies simultaneously",
+        "Stably balanced masses",
+        "None of these"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The universal gravitational constant (G) has the unit:",
+      "options": [
+        "N m²/kg²",
+        "N/kg",
+        "m/s²",
+        "kg m/s"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "An object floats in water if the buoyant force acting on it is:",
+      "options": [
+        "Less than its weight",
+        "Equal to its weight",
+        "Greater than its weight",
+        "Zero"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Work done is negative when the force and displacement are:",
+      "options": [
+        "In the same direction",
+        "Perpendicular to each other",
+        "In opposite directions (angle is 180°)",
+        "At an angle of 45°"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Mechanical energy is the sum of:",
+      "options": [
+        "Kinetic energy and Potential energy",
+        "Heat energy and Chemical energy",
+        "Potential energy and Gravitational pull",
+        "Kinetic energy and Heat energy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Speed of sound is maximum in:",
+      "options": [
+        "Gases",
+        "Liquids",
+        "Solids",
+        "Vacuum"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "SONAR uses which type of waves to detect underwater objects?",
+      "options": [
+        "Audible sound",
+        "Infrasound",
+        "Ultrasound",
+        "Microwaves"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "A train is moving at 72 km/h. Its speed in m/s is:",
+      "options": [
+        "20 m/s",
+        "25 m/s",
+        "10 m/s",
+        "36 m/s"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If the net external force on a body is zero, its acceleration is:",
+      "options": [
+        "Maximum",
+        "Constant non-zero",
+        "Zero",
+        "Negative"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The property of matter to resist any change in its state of motion is called:",
+      "options": [
+        "Momentum",
+        "Inertia",
+        "Friction",
+        "Torque"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The value of 'g' at the poles compared to the equator is:",
+      "options": [
+        "Less",
+        "More",
+        "Same",
+        "Zero"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Pressure is defined as:",
+      "options": [
+        "Force multiplied by area",
+        "Force divided by area (perpendicular to surface)",
+        "Mass divided by volume",
+        "Work done per unit area"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The SI unit of pressure is:",
+      "options": [
+        "Newton",
+        "Joule",
+        "Pascal (N/m²)",
+        "Watt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "1 kilowatt-hour (kWh) is equal to:",
+      "options": [
+        "3.6 × 10^5 J",
+        "3.6 × 10^6 J",
+        "10^3 J",
+        "10^6 J"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A wave has a frequency of 50 Hz and a wavelength of 4 m. Its speed is:",
+      "options": [
+        "200 m/s",
+        "12.5 m/s",
+        "54 m/s",
+        "46 m/s"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The pitch of sound depends upon its:",
+      "options": [
+        "Amplitude",
+        "Frequency",
+        "Loudness",
+        "Waveform"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A car accelerates uniformly from 18 km/h to 54 km/h in 5 seconds. Its acceleration is:",
+      "options": [
+        "2 m/s²",
+        "4 m/s²",
+        "7.2 m/s²",
+        "10 m/s²"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The gravitational force between two objects is F. If the distance between them is halved, the force becomes:",
+      "options": [
+        "2F",
+        "4F",
+        "F/2",
+        "F/4"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Free fall of an object is an example of:",
+      "options": [
+        "Uniform motion",
+        "Uniformly accelerated motion",
+        "Zero acceleration motion",
+        "Circular motion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A body of mass 10 kg is dropped from a height of 5 m. Its kinetic energy just before hitting the ground is ($g = 10\\text{ m/s}^2$):",
+      "options": [
+        "50 J",
+        "500 J",
+        "100 J",
+        "5000 J"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The unit of universal gravitational constant G is:",
+      "options": [
+        "$N m^2 kg^{-2}$",
+        "$N m kg^{-1}$",
+        "$m s^{-2}$",
+        "$kg m s^{-1}$"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In transverse waves, the medium particles vibrate:",
+      "options": [
+        "Parallel to wave propagation",
+        "Perpendicular to wave propagation",
+        "In circular orbits",
+        "Remain stationary"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which of the following has maximum inertia?",
+      "options": [
+        "A rubber ball and a stone of the same size",
+        "A bicycle and a train",
+        "A five-rupee coin and a feather",
+        "A cricket ball and a tennis ball"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
