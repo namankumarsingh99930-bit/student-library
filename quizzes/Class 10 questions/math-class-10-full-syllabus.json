@@ -1,0 +1,506 @@
+{
+  "title": "Math class 10 full syllabus",
+  "subject": "Class 10 questions",
+  "questions": [
+    {
+      "question": "By Euclid's division lemma, for positive integers a and b, a can be written as:",
+      "options": [
+        "a = bq",
+        "a = bq + r, 0 ≤ r < b",
+        "a = b + r",
+        "a = qr + b"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the HCF of 96 and 404 using prime factorisation.",
+      "options": [
+        "4",
+        "8",
+        "12",
+        "16"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following is an irrational number?",
+      "options": [
+        "√16",
+        "√25",
+        "√7",
+        "√81"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "If HCF(a, b) = 6 and product a × b = 360, find LCM(a, b).",
+      "options": [
+        "30",
+        "60",
+        "90",
+        "120"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the degree of the polynomial p(x) = 4x³ + 3x² - 2x + 7?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "If the zeroes of x² - 7x + 10 are α and β, find α + β.",
+      "options": [
+        "7",
+        "10",
+        "-7",
+        "-10"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If the zeroes of x² - 7x + 10 are α and β, find α × β.",
+      "options": [
+        "7",
+        "10",
+        "-7",
+        "17"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find a quadratic polynomial whose sum and product of zeroes are 5 and 6 respectively.",
+      "options": [
+        "x² - 5x + 6",
+        "x² + 5x + 6",
+        "x² - 6x + 5",
+        "x² - 5x - 6"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "For the pair of equations a1x + b1y = c1 and a2x + b2y = c2 to have a unique solution, the condition is:",
+      "options": [
+        "a1/a2 = b1/b2",
+        "a1/a2 ≠ b1/b2",
+        "a1/a2 = b1/b2 = c1/c2",
+        "a1/a2 = b1/b2 ≠ c1/c2"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Solve: x + y = 10 and x - y = 2. Find the value of x.",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The sum of the ages of a father and his son is 45 years. Five years ago, the father's age was 4 times the son's age. Find the son's present age.",
+      "options": [
+        "8 years",
+        "10 years",
+        "12 years",
+        "15 years"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which of the following is the standard form of a quadratic equation?",
+      "options": [
+        "ax + b = 0",
+        "ax² + bx + c = 0, a ≠ 0",
+        "ax³ + bx² + c = 0",
+        "ax² + b = 0 only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "For a quadratic equation ax² + bx + c = 0, the discriminant is given by:",
+      "options": [
+        "b² - 4ac",
+        "b² + 4ac",
+        "4ac - b²",
+        "a² - 4bc"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If the discriminant of a quadratic equation is greater than 0, the roots are:",
+      "options": [
+        "Equal",
+        "Not real",
+        "Real and distinct",
+        "Complex"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Solve using the quadratic formula: x² - 5x + 6 = 0",
+      "options": [
+        "x = 2 or x = 3",
+        "x = 1 or x = 6",
+        "x = -2 or x = -3",
+        "x = 6 or x = -1"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The product of two consecutive positive integers is 240. Find the two integers.",
+      "options": [
+        "14 and 15",
+        "15 and 16",
+        "16 and 17",
+        "13 and 14"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In the AP 5, 8, 11, 14, ..., the common difference is:",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "8"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the 10th term of the AP 3, 7, 11, 15, ...",
+      "options": [
+        "37",
+        "39",
+        "41",
+        "43"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the sum of the first 10 terms of the AP 2, 4, 6, 8, ...",
+      "options": [
+        "100",
+        "110",
+        "120",
+        "90"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A person saves ₹100 in the first week and increases the saving by ₹20 every week. How many weeks will it take for the total savings to first exceed ₹1000?",
+      "options": [
+        "7 weeks",
+        "8 weeks",
+        "9 weeks",
+        "10 weeks"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to the Pythagoras theorem, in a right triangle:",
+      "options": [
+        "(hypotenuse)² = (base)² + (perpendicular)²",
+        "(hypotenuse) = (base) + (perpendicular)",
+        "(base)² = (hypotenuse)² + (perpendicular)²",
+        "(perpendicular)² = (hypotenuse) × (base)"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In triangle ABC, DE || BC, with AD = 3 cm, DB = 6 cm, and AE = 4 cm. Find EC using the Basic Proportionality Theorem.",
+      "options": [
+        "6 cm",
+        "8 cm",
+        "7 cm",
+        "9 cm"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If two triangles are similar with a scale factor of 3, what is the ratio of their areas?",
+      "options": [
+        "3:1",
+        "6:1",
+        "9:1",
+        "27:1"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "A pole casts a shadow of 8 m when a vertical stick of 1 m casts a shadow of 2 m. Find the height of the pole.",
+      "options": [
+        "2 m",
+        "4 m",
+        "8 m",
+        "16 m"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The distance between two points (x1, y1) and (x2, y2) is given by:",
+      "options": [
+        "√[(x2-x1)² + (y2-y1)²]",
+        "(x2-x1) + (y2-y1)",
+        "√[(x2+x1)² + (y2+y1)²]",
+        "(x2-x1)² + (y2-y1)²"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Find the distance between the points A(3, 4) and B(7, 1).",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the midpoint of the line segment joining A(2, 4) and B(6, 8).",
+      "options": [
+        "(3, 5)",
+        "(4, 6)",
+        "(5, 7)",
+        "(4, 5)"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the area of the triangle with vertices A(0,0), B(4,0) and C(0,3).",
+      "options": [
+        "6 sq. units",
+        "12 sq. units",
+        "7 sq. units",
+        "3 sq. units"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the value of sin²θ + cos²θ?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "θ"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the value of tan 45°?",
+      "options": [
+        "0",
+        "1",
+        "√3",
+        "1/√3"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "If sin θ = 3/5, find cos θ (using sin²θ + cos²θ = 1).",
+      "options": [
+        "3/5",
+        "4/5",
+        "5/4",
+        "5/3"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the value of 1 + tan²θ?",
+      "options": [
+        "sin²θ",
+        "cos²θ",
+        "sec²θ",
+        "cosec²θ"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The angle of elevation of the top of a tower from a point 20 m away from its base is 45°. Find the height of the tower.",
+      "options": [
+        "10 m",
+        "15 m",
+        "20 m",
+        "25 m"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "From the top of a 30 m tall building, the angle of depression of a car on the road is 30°. Find the distance of the car from the base of the building.",
+      "options": [
+        "30 m",
+        "30√3 m",
+        "15√3 m",
+        "60 m"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The number of tangents that can be drawn from a point on a circle is:",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "Infinite"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A point P is 13 cm from the centre of a circle of radius 5 cm. Find the length of the tangent from P to the circle.",
+      "options": [
+        "10 cm",
+        "12 cm",
+        "8 cm",
+        "13 cm"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A tangent to a circle is always _____ to the radius at the point of contact.",
+      "options": [
+        "Parallel",
+        "Perpendicular",
+        "Equal",
+        "Coincident"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The circumference of a circle of radius r is given by:",
+      "options": [
+        "πr²",
+        "2πr",
+        "πr",
+        "2πr²"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the area of a circle of radius 7 cm. (use π = 22/7)",
+      "options": [
+        "144 cm²",
+        "154 cm²",
+        "164 cm²",
+        "174 cm²"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the area of a sector of a circle with radius 14 cm and angle 90°. (use π = 22/7)",
+      "options": [
+        "144 cm²",
+        "154 cm²",
+        "164 cm²",
+        "132 cm²"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The volume of a cube of side a is given by:",
+      "options": [
+        "a²",
+        "3a",
+        "a³",
+        "6a²"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Find the volume of a cylinder with radius 7 cm and height 10 cm. (use π = 22/7)",
+      "options": [
+        "1450 cm³",
+        "1540 cm³",
+        "1560 cm³",
+        "1440 cm³"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "A solid is formed by a cone of height 6 cm mounted on a hemisphere of the same radius 3 cm. Find its total volume. (use π = 22/7)",
+      "options": [
+        "131.14 cm³",
+        "141.14 cm³",
+        "113.14 cm³",
+        "121.14 cm³"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "The value that occurs most frequently in a data set is called the:",
+      "options": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Range"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Find the mean of the numbers: 4, 8, 10, 12, 6.",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the median of the data: 5, 12, 8, 21, 3.",
+      "options": [
+        "5",
+        "8",
+        "12",
+        "21"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Find the mean of the data using the direct method: values 10, 20, 30 with frequencies 2, 3, 5 respectively.",
+      "options": [
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "The probability of an event E is given by the formula:",
+      "options": [
+        "P(E) = favourable outcomes / total outcomes",
+        "P(E) = total outcomes / favourable outcomes",
+        "P(E) = favourable outcomes × total outcomes",
+        "P(E) = total outcomes - favourable outcomes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "One card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting a face card.",
+      "options": [
+        "3/13",
+        "1/13",
+        "4/13",
+        "1/4"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "If the probability of an event E happening is 0.35, find the probability of E not happening.",
+      "options": [
+        "0.35",
+        "0.65",
+        "0.5",
+        "1"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}
