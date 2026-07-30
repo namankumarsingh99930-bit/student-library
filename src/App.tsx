@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from 'react';
-import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info, Share2, BookMarked, Sparkles, HelpCircle } from 'lucide-react';
+import { BookOpen, Download, Search, FileText, Loader2, AlertCircle, ChevronLeft, Library, Info, Share2, BookMarked, Sparkles, HelpCircle, Star, ThumbsUp, ThumbsDown, X } from 'lucide-react';
 import {
   fetchLibrary,
   fetchRecentBookPaths,
@@ -17,6 +17,17 @@ import {
 import SideAdBanner from './components/SideAdBanner';
 import RequestBookModal from './components/RequestBookModal';
 import QuizPlayer from './components/QuizPlayer';
+import BookRating from './components/BookRating';
+import {
+  isBookmarked,
+  toggleBookmark,
+  getBookmarks,
+  fetchRating,
+  submitRating,
+  hasRatedLocally,
+  markRatedLocally,
+  RatingCounts,
+} from './lib/social';
 
 import { openPopunder } from './lib/ads';
 
@@ -26,7 +37,8 @@ type Route =
   | { view: 'book'; subject: string; bookSlug: string }
   | { view: 'quizzes' }
   | { view: 'quizSubject'; subject: string }
-  | { view: 'quiz'; path: string };
+  | { view: 'quiz'; path: string }
+  | { view: 'bookmarks' };
 
 function parsePathToRoute(pathname: string): Route {
   const parts = pathname.split('/').filter(Boolean);
@@ -42,6 +54,7 @@ function parsePathToRoute(pathname: string): Route {
     if (parts[1]) return { view: 'quizSubject', subject: decodeURIComponent(parts[1]) };
     return { view: 'quizzes' };
   }
+  if (parts[0] === 'bookmarks') return { view: 'bookmarks' };
   return { view: 'home' };
 }
 
@@ -128,6 +141,9 @@ export default function App() {
   const [quizIndex, setQuizIndex] = useState<QuizIndex | null>(null);
   const [quizIndexLoading, setQuizIndexLoading] = useState(false);
   const [quizIndexError, setQuizIndexError] = useState('');
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [globalQuery, setGlobalQuery] = useState('');
+  const [bookmarkVersion, setBookmarkVersion] = useState(0);
 
   useEffect(() => {
     fetchLibrary()
@@ -147,14 +163,14 @@ export default function App() {
   }, [library]);
 
   useEffect(() => {
-    const needsQuizIndex = route.view === 'quizzes' || route.view === 'quizSubject';
+    const needsQuizIndex = route.view === 'quizzes' || route.view === 'quizSubject' || searchOpen;
     if (!needsQuizIndex || quizIndex) return;
     setQuizIndexLoading(true);
     fetchQuizIndex()
       .then(setQuizIndex)
       .catch((err) => setQuizIndexError(err.message || 'Could not load quizzes.'))
       .finally(() => setQuizIndexLoading(false));
-  }, [route, quizIndex]);
+  }, [route, quizIndex, searchOpen]);
 
   useEffect(() => {
     const onPopState = () => setRoute(parsePathToRoute(window.location.pathname));
@@ -209,6 +225,20 @@ export default function App() {
     );
   }, [route, library]);
 
+  const searchResults = useMemo(() => {
+    const q = globalQuery.trim().toLowerCase();
+    if (!q) return { books: [] as BookEntry[], quizzes: [] as QuizEntry[] };
+    const books = (library?.books || []).filter((b) => humanizeTitle(b.name).toLowerCase().includes(q)).slice(0, 8);
+    const quizzes = (quizIndex?.quizzes || []).filter((qz) => qz.title.toLowerCase().includes(q)).slice(0, 5);
+    return { books, quizzes };
+  }, [globalQuery, library, quizIndex]);
+
+  const bookmarkedBooks = useMemo(() => {
+    if (!library) return [];
+    const saved = getBookmarks();
+    return library.books.filter((b) => saved.includes(b.path));
+  }, [library, bookmarkVersion]);
+
   return (
     <div className="min-h-screen bg-paper text-ink font-body flex flex-col">
       <header className="max-w-5xl mx-auto w-full px-5 sm:px-8 py-6 flex items-center gap-2.5">
@@ -228,13 +258,31 @@ export default function App() {
             <div className="text-[11px] text-muted mt-0.5">book PDF library</div>
           </div>
         </a>
+        <button
+          onClick={() => setSearchOpen((v) => !v)}
+          className="ml-auto flex items-center justify-center w-8 h-8 rounded-full text-muted hover:bg-stone-100 hover:text-ink transition-colors shrink-0"
+          aria-label="Search"
+        >
+          <Search className="w-4 h-4" />
+        </button>
+        <a
+          href="/bookmarks"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/bookmarks');
+          }}
+          className="flex items-center justify-center w-8 h-8 rounded-full text-muted hover:bg-stone-100 hover:text-ink transition-colors shrink-0"
+          aria-label="Bookmarks"
+        >
+          <Star className="w-4 h-4" />
+        </a>
         <a
           href="/quiz"
           onClick={(e) => {
             e.preventDefault();
             navigate('/quiz');
           }}
-          className="ml-auto flex items-center gap-1.5 text-xs font-semibold text-index bg-index-soft px-3 py-1.5 rounded-full hover:bg-index hover:text-white transition-colors shrink-0"
+          className="flex items-center gap-1.5 text-xs font-semibold text-index bg-index-soft px-3 py-1.5 rounded-full hover:bg-index hover:text-white transition-colors shrink-0"
         >
           <HelpCircle className="w-3.5 h-3.5" />
           <span>Quizzes</span>
@@ -254,6 +302,75 @@ export default function App() {
           </span>
         )}
       </header>
+
+      {searchOpen && (
+        <div className="max-w-5xl mx-auto w-full px-5 sm:px-8 -mt-2 mb-4">
+          <div className="bg-white border border-line rounded-xl shadow-md p-3">
+            <div className="flex items-center gap-2">
+              <Search className="w-4 h-4 text-muted shrink-0" />
+              <input
+                autoFocus
+                type="text"
+                value={globalQuery}
+                onChange={(e) => setGlobalQuery(e.target.value)}
+                placeholder="Search all books and quizzes…"
+                className="flex-1 text-sm focus:outline-none"
+              />
+              <button
+                onClick={() => {
+                  setSearchOpen(false);
+                  setGlobalQuery('');
+                }}
+                className="text-muted hover:text-ink shrink-0"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {globalQuery.trim() && (
+              <div className="mt-3 border-t border-line pt-3 space-y-1 max-h-72 overflow-y-auto">
+                {searchResults.books.length === 0 && searchResults.quizzes.length === 0 && (
+                  <p className="text-xs text-muted px-1 py-2">No matches found.</p>
+                )}
+                {searchResults.books.map((b) => (
+                  <a
+                    key={b.path}
+                    href={bookPath(b.subject, b)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSearchOpen(false);
+                      setGlobalQuery('');
+                      navigate(bookPath(b.subject, b));
+                    }}
+                    className="flex items-center gap-2 px-2 py-2 rounded-lg hover:bg-stone-50 text-sm"
+                  >
+                    <FileText className="w-3.5 h-3.5 text-index shrink-0" />
+                    <span className="truncate">{humanizeTitle(b.name)}</span>
+                    <span className="text-[10px] text-muted ml-auto shrink-0">{b.subject}</span>
+                  </a>
+                ))}
+                {searchResults.quizzes.map((qz) => (
+                  <a
+                    key={qz.path}
+                    href={quizPlayPath(qz)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setSearchOpen(false);
+                      setGlobalQuery('');
+                      navigate(quizPlayPath(qz));
+                    }}
+                    className="flex items-center gap-2 px-2 py-2 rounded-lg hover:bg-stone-50 text-sm"
+                  >
+                    <HelpCircle className="w-3.5 h-3.5 text-index shrink-0" />
+                    <span className="truncate capitalize">{qz.title}</span>
+                    <span className="text-[10px] text-muted ml-auto shrink-0">Quiz · {qz.subject}</span>
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {showRequestModal && <RequestBookModal onClose={() => setShowRequestModal(false)} />}
 
@@ -443,6 +560,20 @@ export default function App() {
                       </div>
                     </a>
                     <button
+                      onClick={() => {
+                        toggleBookmark(book.path);
+                        setBookmarkVersion((v) => v + 1);
+                      }}
+                      className="shrink-0 p-1.5 text-muted hover:text-index transition-colors"
+                      aria-label="Bookmark"
+                    >
+                      <Star
+                        className="w-4 h-4"
+                        fill={isBookmarked(book.path) ? 'currentColor' : 'none'}
+                        style={isBookmarked(book.path) ? { color: '#C08A2E' } : undefined}
+                      />
+                    </button>
+                    <button
                       onClick={() => handleDownload(rawUrl(book.path), book.name)}
                       className="shrink-0 px-4 py-2 rounded-lg bg-shelf-soft text-shelf font-semibold text-xs flex items-center gap-1.5 hover:bg-shelf hover:text-white transition-colors"
                     >
@@ -507,7 +638,7 @@ export default function App() {
                     StudyShelf, a free student library. No sign-up required.
                   </p>
 
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-2.5 mb-6">
                     <button
                       onClick={() => handleDownload(rawUrl(activeBook.path), activeBook.name)}
                       className="px-6 py-3 rounded-xl bg-shelf hover:bg-shelf/90 text-white font-semibold text-sm flex items-center gap-2 transition-colors"
@@ -522,7 +653,23 @@ export default function App() {
                     >
                       <Share2 className="w-4 h-4" />
                     </button>
+                    <button
+                      onClick={() => {
+                        toggleBookmark(activeBook.path);
+                        setBookmarkVersion((v) => v + 1);
+                      }}
+                      className="p-3 rounded-xl border border-line hover:border-index/40 text-muted hover:text-index transition-colors"
+                      aria-label="Bookmark this book"
+                    >
+                      <Star
+                        className="w-4 h-4"
+                        fill={isBookmarked(activeBook.path) ? 'currentColor' : 'none'}
+                        style={isBookmarked(activeBook.path) ? { color: '#C08A2E' } : undefined}
+                      />
+                    </button>
                   </div>
+
+                  <BookRating bookPath={activeBook.path} />
                 </div>
               )}
             </>
@@ -623,6 +770,63 @@ export default function App() {
 
           {route.view === 'quiz' && (
             <QuizPlayer path={route.path} onExit={() => navigate('/quiz')} />
+          )}
+
+          {route.view === 'bookmarks' && (
+            <>
+              <h1 className="font-display font-semibold text-2xl sm:text-3xl mb-1">My Bookmarks</h1>
+              <p className="text-muted text-sm mb-8">Books you've saved for later.</p>
+
+              {bookmarkedBooks.length === 0 && (
+                <p className="text-muted text-sm">
+                  No bookmarks yet — tap the star icon on any book to save it here.
+                </p>
+              )}
+
+              <div className="space-y-2.5">
+                {bookmarkedBooks.map((book) => (
+                  <div
+                    key={book.path}
+                    className="flex items-center justify-between gap-3 px-4 py-3.5 rounded-xl border border-line hover:border-shelf/40 transition-colors"
+                  >
+                    <a
+                      href={bookPath(book.subject, book)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        navigate(bookPath(book.subject, book));
+                      }}
+                      className="flex items-center gap-3 min-w-0 flex-1"
+                    >
+                      {book.coverPath ? (
+                        <img
+                          src={rawUrl(book.coverPath)}
+                          alt=""
+                          className="w-9 h-11 rounded-md object-cover border border-line shrink-0"
+                        />
+                      ) : (
+                        <div className="w-9 h-9 rounded-lg bg-index-soft flex items-center justify-center shrink-0">
+                          <FileText className="w-4 h-4 text-index" />
+                        </div>
+                      )}
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold truncate hover:underline">{humanizeTitle(book.name)}</div>
+                        <div className="text-[11px] font-mono text-muted mt-0.5">{book.subject}</div>
+                      </div>
+                    </a>
+                    <button
+                      onClick={() => {
+                        toggleBookmark(book.path);
+                        setBookmarkVersion((v) => v + 1);
+                      }}
+                      className="shrink-0 p-1.5 text-index"
+                      aria-label="Remove bookmark"
+                    >
+                      <Star className="w-4 h-4" fill="currentColor" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </>
           )}
         </main>
 
